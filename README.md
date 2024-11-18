@@ -49,8 +49,8 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 3. **Gerente do Restaurante**  
    *Como gerente, quero visualizar relatórios de desempenho dos pratos para entender quais são mais bem avaliados e quais precisam de melhorias.*  
    
-4. **Gerente do Restaurante**  
-   *Como gerente, quero responder aos comentários dos clientes para mostrar que valorizo o feedback e estou trabalhando para melhorar.*  
+4. **Alterar perfil**  
+   *Como usuário, quero alterar meu perfil; Como gerente quero alterar meu perfil*  
     
 
 5. **Usuário Comum**  
