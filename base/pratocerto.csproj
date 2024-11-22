@@ -193,6 +193,9 @@
     <EmbeddedResource Include="comentarioComida.resx">
       <DependentUpon>comentarioComida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="comentarioEmpresa.resx">
+      <DependentUpon>comentarioEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="excluirComida.resx">
       <DependentUpon>excluirComida.cs</DependentUpon>
     </EmbeddedResource>

@@ -61,27 +61,27 @@ namespace pratocerto
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
-            this.panel6.BackColor = Color.FromArgb(134, 8, 26);
+          
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            this.panel5.BackColor = Color.FromArgb(178, 48, 67);
+            //this.panel5.BackColor = Color.FromArgb(178, 48, 67);
         }
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-            this.panel7.BackColor = Color.FromArgb(178, 48, 67);
+          
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
-            this.panel8.BackColor = Color.FromArgb(178, 48, 67);
+           
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
-            this.panel9.BackColor = Color.FromArgb(178, 48, 67);
+           
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

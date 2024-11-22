@@ -279,6 +279,7 @@ namespace pratocerto
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CadastroEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroEmpresa";
             this.Load += new System.EventHandler(this.CadastroEmpresa_Load);
             this.ResumeLayout(false);

@@ -38,6 +38,10 @@ namespace pratocerto
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,18 +53,14 @@ namespace pratocerto
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -93,7 +93,7 @@ namespace pratocerto
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1402, 44);
+            this.panel1.Size = new System.Drawing.Size(819, 44);
             this.panel1.TabIndex = 37;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -104,7 +104,7 @@ namespace pratocerto
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1208, 3);
+            this.button1.Location = new System.Drawing.Point(735, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 40);
             this.button1.TabIndex = 3;
@@ -121,7 +121,7 @@ namespace pratocerto
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1013, 12);
+            this.textBox1.Location = new System.Drawing.Point(540, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(189, 20);
             this.textBox1.TabIndex = 1;
@@ -156,9 +156,56 @@ namespace pratocerto
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Location = new System.Drawing.Point(16, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1326, 692);
+            this.panel2.Size = new System.Drawing.Size(803, 629);
             this.panel2.TabIndex = 38;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Location = new System.Drawing.Point(48, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 71);
+            this.pictureBox2.TabIndex = 50;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(126, 117);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 28);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Foto do prato";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Location = new System.Drawing.Point(121, 469);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(221, 42);
+            this.panel3.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Menu;
+            this.label2.Location = new System.Drawing.Point(-1, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(224, 31);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Deseja cadastrar?";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label8
             // 
@@ -166,12 +213,12 @@ namespace pratocerto
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(239, 514);
+            this.label8.Location = new System.Drawing.Point(116, 514);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(818, 56);
+            this.label8.Size = new System.Drawing.Size(484, 84);
             this.label8.TabIndex = 48;
-            this.label8.Text = "Ao adicionar a agora, poderá alterar alguma informação se necessário. Caso \r\nquei" +
-    "ra adicionar um novo prato, volte ao perfil. ";
+            this.label8.Text = "Ao adicionar a agora, poderá alterar alguma \r\ninformação se necessário. Caso quei" +
+    "ra \r\nadicionar um novo prato, volte ao perfil. ";
             // 
             // button7
             // 
@@ -179,7 +226,7 @@ namespace pratocerto
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1104, 514);
+            this.button7.Location = new System.Drawing.Point(621, 541);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(101, 30);
             this.button7.TabIndex = 47;
@@ -193,7 +240,7 @@ namespace pratocerto
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(738, 330);
+            this.label5.Location = new System.Drawing.Point(404, 310);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 28);
             this.label5.TabIndex = 46;
@@ -202,7 +249,7 @@ namespace pratocerto
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(244, 131);
+            this.panel5.Location = new System.Drawing.Point(106, 148);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 215);
             this.panel5.TabIndex = 39;
@@ -221,7 +268,7 @@ namespace pratocerto
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(743, 359);
+            this.textBox4.Location = new System.Drawing.Point(409, 339);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(349, 30);
             this.textBox4.TabIndex = 45;
@@ -232,7 +279,7 @@ namespace pratocerto
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(276, 369);
+            this.button2.Location = new System.Drawing.Point(142, 387);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(134, 37);
             this.button2.TabIndex = 40;
@@ -242,7 +289,7 @@ namespace pratocerto
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(743, 168);
+            this.textBox2.Location = new System.Drawing.Point(409, 148);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(349, 30);
             this.textBox2.TabIndex = 41;
@@ -253,7 +300,7 @@ namespace pratocerto
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(738, 229);
+            this.label4.Location = new System.Drawing.Point(404, 209);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 28);
             this.label4.TabIndex = 44;
@@ -265,7 +312,7 @@ namespace pratocerto
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(738, 139);
+            this.label3.Location = new System.Drawing.Point(404, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 28);
             this.label3.TabIndex = 42;
@@ -274,63 +321,17 @@ namespace pratocerto
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(743, 258);
+            this.textBox3.Location = new System.Drawing.Point(409, 238);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(349, 30);
             this.textBox3.TabIndex = 43;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label2.Location = new System.Drawing.Point(-1, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 31);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Deseja cadastrar?";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(244, 469);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 42);
-            this.panel3.TabIndex = 39;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(264, 100);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 28);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Foto do prato";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 71);
-            this.pictureBox2.TabIndex = 50;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // adicionarComida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1354, 731);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(848, 487);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
@@ -344,11 +345,11 @@ namespace pratocerto
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -33,5 +33,15 @@ namespace pratocerto
             home.Show();
             this.Close();
         }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+            this.panel3.BackColor = Color.FromArgb(178, 48, 67);
+        }
     }
 }
