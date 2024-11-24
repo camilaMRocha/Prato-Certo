@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23/11/2024 às 16:53
+-- Tempo de geração: 25/11/2024 às 00:24
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -35,13 +35,6 @@ CREATE TABLE `avalia` (
   `nota` int(1) DEFAULT NULL CHECK (`nota` between 1 and 5)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Despejando dados para a tabela `avalia`
---
-
-INSERT INTO `avalia` (`id`, `FK_cliente_id`, `FK_prato_id`, `comentario`, `nota`) VALUES
-(1, 1, 1, 'Sopa incrível, muito saborosa!', 5);
-
 -- --------------------------------------------------------
 
 --
@@ -55,16 +48,19 @@ CREATE TABLE `cliente` (
   `senha` varchar(255) NOT NULL,
   `tipo` tinyint(1) NOT NULL,
   `telefone` varchar(20) DEFAULT NULL,
-  `rua` varchar(100) DEFAULT NULL
+  `rua` varchar(100) DEFAULT NULL,
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `tipo`, `telefone`, `rua`) VALUES
-(1, 'João Silva', 'joao@email.com', 'senha123', 0, NULL, NULL),
-(2, 'Restaurante X', 'restaurante@x.com', 'senha456', 1, '123456789', 'Rua A');
+INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `tipo`, `telefone`, `rua`, `foto`) VALUES
+(16, 'franken', 'frank@gmail.com', '1234frank', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\8ba7081c-3217-4a3e-b0dd-8aae7cce48de.png'),
+(17, 'rukia kuchiki', 'rukia@gmail.com', '1234rukia', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\5a62187a-358b-4657-b940-fcdfa0e80871.jfif'),
+(18, 'jessica', 'jessica@gmail.com', '1234jessica', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\df9bb70b-2552-4091-8495-804dd07b899c.png'),
+(19, 'dicas e promos', 'diquinhas@gmail.com', '1234dicas', 1, '1959563565', 'instagram', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\ab15fd69-d0d5-444b-acbe-4d27387af524.png');
 
 -- --------------------------------------------------------
 
@@ -79,13 +75,6 @@ CREATE TABLE `prato` (
   `descricao` text NOT NULL,
   `FK_restaurante_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `prato`
---
-
-INSERT INTO `prato` (`id`, `nome`, `preco`, `descricao`, `FK_restaurante_id`) VALUES
-(1, 'Sopa de Legumes', 15.50, 'Deliciosa sopa feita com legumes frescos.', 2);
 
 --
 -- Índices para tabelas despejadas
@@ -127,7 +116,7 @@ ALTER TABLE `avalia`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de tabela `prato`
