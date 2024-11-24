@@ -93,7 +93,7 @@ namespace pratocerto
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(164, 347);
+            this.button1.Location = new System.Drawing.Point(155, 347);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 42);
             this.button1.TabIndex = 4;
@@ -116,13 +116,14 @@ namespace pratocerto
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(102, 275);
+            this.label4.Location = new System.Drawing.Point(100, 275);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(302, 19);
+            this.label4.Size = new System.Drawing.Size(295, 19);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Não está cadastrado? Clique no link abaixo.";
+            this.label4.Text = "Não está cadastrado? Se torne um usuário.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
@@ -154,12 +155,12 @@ namespace pratocerto
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.Window;
-            this.linkLabel1.Location = new System.Drawing.Point(207, 294);
+            this.linkLabel1.Location = new System.Drawing.Point(139, 306);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(88, 19);
+            this.linkLabel1.Size = new System.Drawing.Size(200, 19);
             this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cadastre-se";
+            this.linkLabel1.Text = "É uma empresa? Clique aqui.";
             this.linkLabel1.VisitedLinkColor = System.Drawing.SystemColors.ActiveCaption;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
