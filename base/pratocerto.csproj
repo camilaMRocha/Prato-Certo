@@ -146,6 +146,12 @@
     <Compile Include="homePage.Designer.cs">
       <DependentUpon>homePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="homePageEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="homePageEmpresa.Designer.cs">
+      <DependentUpon>homePageEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="homePage.resx">
       <DependentUpon>homePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homePageEmpresa.resx">
+      <DependentUpon>homePageEmpresa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

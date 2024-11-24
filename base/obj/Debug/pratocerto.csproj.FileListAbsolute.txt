@@ -128,3 +128,4 @@ C:\Users\Alima\Desktop\Etec\4°Bimestre\00trabalho ds\Prato-Certo\base\obj\Debug
 C:\Users\Alima\Desktop\Etec\4°Bimestre\00trabalho ds\Prato-Certo\base\obj\Debug\pratocerto.csproj.CopyComplete
 C:\Users\Alima\Desktop\Etec\4°Bimestre\00trabalho ds\Prato-Certo\base\obj\Debug\pratocerto.exe
 C:\Users\Alima\Desktop\Etec\4°Bimestre\00trabalho ds\Prato-Certo\base\obj\Debug\pratocerto.pdb
+C:\Users\Alima\Desktop\Etec\4°Bimestre\00trabalho ds\Prato-Certo\base\obj\Debug\pratocerto.homePageEmpresa.resources
