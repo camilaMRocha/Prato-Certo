@@ -34,8 +34,8 @@ namespace pratocerto
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            homePage home = new homePage();
-            home.Show();
+            homePageEmpresa homeRestaurante = new homePageEmpresa();
+            homeRestaurante.Show();
             this.Close();
         }
 
