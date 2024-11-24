@@ -21,8 +21,9 @@ namespace pratocerto
             conexao.ConnectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ";
             conexao.Open();
 
-        }
 
+
+        }
 
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -30,61 +31,62 @@ namespace pratocerto
 
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBox1.Text;
             string senha = textBox2.Text;
 
-          
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(senha))
-            {
-                MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
                 try
                 {
-
                     conexao.Open();
 
-                    
-                    string query = "SELECT * FROM cliente WHERE email = @email AND senha = @senha;";
+                    // Consulta para verificar login e recuperar informações do usuário
+                    string query = "SELECT id, nome, email, tipo, senha, telefone, rua, foto FROM cliente WHERE email = @Email AND senha = @Senha;";
                     MySqlCommand comando = new MySqlCommand(query, conexao);
-
-                    comando.Parameters.AddWithValue("@email", email);
-                    comando.Parameters.AddWithValue("@senha", senha);
-
+                    comando.Parameters.AddWithValue("@Email", email);
+                    comando.Parameters.AddWithValue("@Senha", senha);
 
                     MySqlDataReader leitor = comando.ExecuteReader();
 
                     if (leitor.Read())
                     {
-                        // Login bem-sucedido, verifica o tipo do usuário
-                        int tipo = leitor.GetInt32("tipo");
+                        // Preenche a sessão com os dados do usuário
+                        sessaoUsuario.id = leitor.GetInt32("id");
+                        sessaoUsuario.nome = leitor.GetString("nome");
+                        sessaoUsuario.email = leitor.GetString("email");
+                        sessaoUsuario.tipo = leitor.GetInt32("tipo");
+                        sessaoUsuario.senha = leitor.GetString("senha");
+
+                        
+                        sessaoUsuario.telefone = leitor.IsDBNull(leitor.GetOrdinal("telefone")) ? null : leitor.GetString("telefone");
+
+                      
+                        sessaoUsuario.rua = leitor.IsDBNull(leitor.GetOrdinal("rua")) ? null : leitor.GetString("rua");
+
+                        // Verifica se a foto é nula, se for, atribui "Imagem não disponível"
+                        sessaoUsuario.foto = leitor.IsDBNull(leitor.GetOrdinal("foto")) ? null : leitor.GetString("foto");
+
                         leitor.Close();
 
-                        if (tipo == 0)
+                        
+                        if (sessaoUsuario.tipo == 0) 
                         {
-                            //home usuário comum
-                            MessageBox.Show("Bem-vindo, cliente!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             homePage clienteHome = new homePage();
                             clienteHome.Show();
                         }
-                        else if (tipo == 1)
+                        else if (sessaoUsuario.tipo == 1)
                         {
-                            //home empresa
-                            MessageBox.Show("Bem-vindo, restaurante!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             homePageEmpresa restauranteHome = new homePageEmpresa();
                             restauranteHome.Show();
                         }
 
-                        this.Hide(); // Esconde a janela atual após o login
+                        this.Hide(); // Esconde o formulário de login
                     }
                     else
                     {
-                        // Login falhou
                         MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -92,7 +94,6 @@ namespace pratocerto
                 {
                     MessageBox.Show($"Erro ao conectar com o banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
 
 

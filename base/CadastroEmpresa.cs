@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+
 
 namespace pratocerto
 {
     public partial class CadastroEmpresa : Form
     {
+        public string imagePath;
+
         public CadastroEmpresa()
         {
             InitializeComponent();
@@ -56,75 +60,92 @@ namespace pratocerto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Validação das senhas
             string senha = textBox3.Text;
             string confirmarSenha = textBox4.Text;
 
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (senha != confirmarSenha)
             {
-                MessageBox.Show("Por favor, insira o seu nome.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("As senhas não coincidem.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
-            {
-                MessageBox.Show("Por favor, insira o seu email.", "Campo obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Verificar se a senha é válida
             if (!ValidarSenha(senha))
             {
-                return; // Interrompe o cadastro se a senha for inválida
+                return;
             }
 
-            // Verificar se as senhas coincidem
-            if (senha == confirmarSenha)
+            // Validação de campos obrigatórios
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                string nome = textBox1.Text;
-                string email = textBox2.Text;
-                string telefone = textBox3.Text;
-                string rua = textBox4.Text;
+                MessageBox.Show("Por favor, preencha os campos obrigatórios (Nome e Email).", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                //inserindo o cliente
-                using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
+            // Captura os dados do formulário
+            string nome = textBox1.Text;
+            string email = textBox2.Text;
+            string telefone = string.IsNullOrWhiteSpace(textBox5.Text) ? null : textBox5.Text;
+            string rua = string.IsNullOrWhiteSpace(textBox6.Text) ? null : textBox6.Text;
+
+            string fotoCaminho = null;
+
+            // Salvar a imagem, se existir
+            if (pictureBox1.Image != null)
+            {
+                try
                 {
-                    // Corrigir a consulta SQL
-                    string inserir = "INSERT INTO cliente (nome, email, senha, tipo, telefone, rua) VALUES (@nome, @email, @senha, @tipo, @telefone, @rua);";
-                    MySqlCommand comandos = new MySqlCommand(inserir, conexao);
-
-                    // Adicionar os parâmetros corretamente
-                    comandos.Parameters.AddWithValue("@nome", nome);
-                    comandos.Parameters.AddWithValue("@email", email);
-                    comandos.Parameters.AddWithValue("@senha", senha);
-                    comandos.Parameters.AddWithValue("@tipo", 1);
-                    comandos.Parameters.AddWithValue("@telefone", telefone);
-                    comandos.Parameters.AddWithValue("@rua", rua);
-
-                    try
+                    string diretorioImagens = Path.Combine(Application.StartupPath, "Fotos");
+                    if (!Directory.Exists(diretorioImagens))
                     {
-                        conexao.Open();
-                        comandos.ExecuteNonQuery();
-                        MessageBox.Show("Cadastro realizado com sucesso!");
+                        Directory.CreateDirectory(diretorioImagens);
+                    }
 
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Erro ao cadastrar: {ex.Message}");
-                    }
+                    string nomeImagem = Guid.NewGuid().ToString() + ".png";
+                    fotoCaminho = Path.Combine(diretorioImagens, nomeImagem);
+                    pictureBox1.Image.Save(fotoCaminho, System.Drawing.Imaging.ImageFormat.Png);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao salvar a imagem: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
             }
-            else
+
+            // Conexão com o banco de dados
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
-                MessageBox.Show("As senhas não coincidem.");
+                string inserir = "INSERT INTO cliente (nome, email, senha, tipo, telefone, rua, foto) " +
+                                 "VALUES (@nome, @email, @senha, @tipo, @telefone, @rua, @foto);";
+
+                MySqlCommand comando = new MySqlCommand(inserir, conexao);
+
+                comando.Parameters.AddWithValue("@nome", nome);
+                comando.Parameters.AddWithValue("@email", email);
+                comando.Parameters.AddWithValue("@senha", senha);
+                comando.Parameters.AddWithValue("@tipo", 1); // Tipo 1 para empresa
+                comando.Parameters.AddWithValue("@telefone", telefone ?? (object)DBNull.Value);
+                comando.Parameters.AddWithValue("@rua", rua ?? (object)DBNull.Value);
+                comando.Parameters.AddWithValue("@foto", fotoCaminho ?? (object)DBNull.Value);
+
+                try
+                {
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
+                    MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            
+                                
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -161,6 +182,21 @@ namespace pratocerto
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != '-')
             {
                 e.Handled = true; 
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.jfif;";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string fotoCaminho = openFileDialog.FileName;
+
+                    pictureBox1.Image = Image.FromFile(fotoCaminho);
+                }
             }
         }
     }
