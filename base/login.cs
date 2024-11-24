@@ -43,9 +43,7 @@ namespace pratocerto
 
         private void label5_Click(object sender, EventArgs e)
         {
-            CadastroUsuario cadUsu = new CadastroUsuario();
-            cadUsu.Show();
-           
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -70,7 +68,8 @@ namespace pratocerto
 
         private void label4_Click(object sender, EventArgs e)
         {
-
+            CadastroUsuario cadUsu = new CadastroUsuario();
+            cadUsu.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -80,8 +79,8 @@ namespace pratocerto
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CadastroUsuario cadUsu = new CadastroUsuario();
-            cadUsu.Show();
+            CadastroEmpresa cadEmp = new CadastroEmpresa();
+            cadEmp.Show();
         }
     }
 }
