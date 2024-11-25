@@ -50,7 +50,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
    *Como gerente, quero visualizar relatórios de desempenho dos pratos para entender quais são mais bem avaliados e quais precisam de melhorias.*  
    
 4. **Alterar Perfil**  
-   *Como usuário, quero alterar meu perfil; Como gerente quero alterar meu perfil*  
+   *Como usuário, quero alterar meu perfil; Como gerente quero alterar meu perfil.*  
     
 
 5. **Usuário Comum**  
