@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25/11/2024 às 00:24
+-- Tempo de geração: 26/11/2024 às 00:10
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `prato_certo`
+-- Banco de dados: `teste`
 --
 
 -- --------------------------------------------------------
@@ -28,11 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `avalia` (
-  `id` int(11) NOT NULL,
-  `FK_cliente_id` int(11) NOT NULL,
-  `FK_prato_id` int(11) NOT NULL,
-  `comentario` text NOT NULL,
-  `nota` int(1) DEFAULT NULL CHECK (`nota` between 1 and 5)
+  `FK_cliente_id` int(11) DEFAULT NULL,
+  `FK_prato_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -42,25 +39,12 @@ CREATE TABLE `avalia` (
 --
 
 CREATE TABLE `cliente` (
+  `nome` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `senha` varchar(255) NOT NULL,
-  `tipo` tinyint(1) NOT NULL,
-  `telefone` varchar(20) DEFAULT NULL,
-  `rua` varchar(100) DEFAULT NULL,
-  `foto` varchar(255) NOT NULL
+  `senha` varchar(20) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `cliente`
---
-
-INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `tipo`, `telefone`, `rua`, `foto`) VALUES
-(16, 'franken', 'frank@gmail.com', '1234frank', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\8ba7081c-3217-4a3e-b0dd-8aae7cce48de.png'),
-(17, 'rukia kuchiki', 'rukia@gmail.com', '1234rukia', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\5a62187a-358b-4657-b940-fcdfa0e80871.jfif'),
-(18, 'jessica', 'jessica@gmail.com', '1234jessica', 0, NULL, NULL, 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\df9bb70b-2552-4091-8495-804dd07b899c.png'),
-(19, 'dicas e promos', 'diquinhas@gmail.com', '1234dicas', 1, '1959563565', 'instagram', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\ab15fd69-d0d5-444b-acbe-4d27387af524.png');
 
 -- --------------------------------------------------------
 
@@ -69,11 +53,28 @@ INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `tipo`, `telefone`, `rua`
 --
 
 CREATE TABLE `prato` (
+  `avaliacao` varchar(1000) DEFAULT NULL,
+  `restaurante` varchar(100) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL,
-  `preco` decimal(10,2) NOT NULL,
-  `descricao` text NOT NULL,
-  `FK_restaurante_id` int(11) NOT NULL
+  `preco` int(11) DEFAULT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `descricao` varchar(1000) DEFAULT NULL,
+  `FK_restaurante_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `restaurante`
+--
+
+CREATE TABLE `restaurante` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) DEFAULT NULL,
+  `telefone` varchar(20) DEFAULT NULL,
+  `rua` varchar(100) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -84,45 +85,49 @@ CREATE TABLE `prato` (
 -- Índices de tabela `avalia`
 --
 ALTER TABLE `avalia`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_cliente_id` (`FK_cliente_id`),
-  ADD KEY `FK_prato_id` (`FK_prato_id`);
+  ADD KEY `FK_avalia_0` (`FK_cliente_id`),
+  ADD KEY `FK_avalia_1` (`FK_prato_id`);
 
 --
 -- Índices de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices de tabela `prato`
 --
 ALTER TABLE `prato`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_restaurante_id` (`FK_restaurante_id`);
+  ADD KEY `FK_prato_1` (`FK_restaurante_id`);
+
+--
+-- Índices de tabela `restaurante`
+--
+ALTER TABLE `restaurante`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT de tabela `avalia`
---
-ALTER TABLE `avalia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `prato`
 --
 ALTER TABLE `prato`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `restaurante`
+--
+ALTER TABLE `restaurante`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para tabelas despejadas
@@ -132,14 +137,14 @@ ALTER TABLE `prato`
 -- Restrições para tabelas `avalia`
 --
 ALTER TABLE `avalia`
-  ADD CONSTRAINT `avalia_ibfk_1` FOREIGN KEY (`FK_cliente_id`) REFERENCES `cliente` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `avalia_ibfk_2` FOREIGN KEY (`FK_prato_id`) REFERENCES `prato` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_avalia_cliente` FOREIGN KEY (`FK_cliente_id`) REFERENCES `cliente` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_avalia_prato` FOREIGN KEY (`FK_prato_id`) REFERENCES `prato` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Restrições para tabelas `prato`
 --
 ALTER TABLE `prato`
-  ADD CONSTRAINT `prato_ibfk_1` FOREIGN KEY (`FK_restaurante_id`) REFERENCES `cliente` (`id`) ON DELETE CASCADE;
+  ADD CONSTRAINT `FK_prato_1` FOREIGN KEY (`FK_restaurante_id`) REFERENCES `restaurante` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
