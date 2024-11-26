@@ -22,10 +22,10 @@ namespace pratocerto
             conexao.ConnectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ";
             conexao.Open();
 
-            label1.Text = $"{sessaoUsuario.nome}!";
-            label2.Text = $"{sessaoUsuario.nome}!";
+            label1.Text = $"{sessaoUsuario.nome}";
+            label2.Text = $"{sessaoUsuario.nome}";
 
-            label1.Text = $"{sessaoUsuario.nome}!";
+            label1.Text = $"{sessaoUsuario.nome}";
             textBox2.Text = sessaoUsuario.nome;
             textBox3.Text = sessaoUsuario.email;
             textBox4.Text = sessaoUsuario.senha;
