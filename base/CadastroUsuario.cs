@@ -124,13 +124,12 @@ namespace pratocerto
                 // Conexão com o banco de dados e inserção
                 using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
                 {
-                    string inserir = "INSERT INTO cliente (nome, email, senha, tipo, foto) VALUES (@nome, @email, @senha, @tipo, @foto);";
+                    string inserir = "INSERT INTO cliente (nome, email, senha, foto) VALUES (@nome, @email, @senha, @foto);";
                     MySqlCommand comandos = new MySqlCommand(inserir, conexao);
 
                     comandos.Parameters.AddWithValue("@nome", nome);
                     comandos.Parameters.AddWithValue("@email", email);
                     comandos.Parameters.AddWithValue("@senha", senha);
-                    comandos.Parameters.AddWithValue("@tipo", 0); 
                     comandos.Parameters.AddWithValue("@foto", string.IsNullOrEmpty(fotoCaminho) ? DBNull.Value : (object)fotoCaminho);
 
                     try

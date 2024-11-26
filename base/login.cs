@@ -43,51 +43,63 @@ namespace pratocerto
                 {
                     conexao.Open();
 
-                    // Consulta para verificar login e recuperar informações do usuário
-                    string query = "SELECT id, nome, email, tipo, senha, telefone, rua, foto FROM cliente WHERE email = @Email AND senha = @Senha;";
-                    MySqlCommand comando = new MySqlCommand(query, conexao);
-                    comando.Parameters.AddWithValue("@Email", email);
-                    comando.Parameters.AddWithValue("@Senha", senha);
-
-                    MySqlDataReader leitor = comando.ExecuteReader();
-
-                    if (leitor.Read())
+                    // Verifique primeiro se o usuário é um restaurante
+                    string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto FROM restaurante WHERE email = @Email AND senha = @Senha;";
+                    using (MySqlCommand comandoRestaurante = new MySqlCommand(queryRestaurante, conexao))
                     {
-                        // Preenche a sessão com os dados do usuário
-                        sessaoUsuario.id = leitor.GetInt32("id");
-                        sessaoUsuario.nome = leitor.GetString("nome");
-                        sessaoUsuario.email = leitor.GetString("email");
-                        sessaoUsuario.tipo = leitor.GetInt32("tipo");
-                        sessaoUsuario.senha = leitor.GetString("senha");
+                        comandoRestaurante.Parameters.AddWithValue("@Email", email);
+                        comandoRestaurante.Parameters.AddWithValue("@Senha", senha);
 
-                        
-                        sessaoUsuario.telefone = leitor.IsDBNull(leitor.GetOrdinal("telefone")) ? null : leitor.GetString("telefone");
-
-                      
-                        sessaoUsuario.rua = leitor.IsDBNull(leitor.GetOrdinal("rua")) ? null : leitor.GetString("rua");
-
-                        // Verifica se a foto é nula, se for, atribui "Imagem não disponível"
-                        sessaoUsuario.foto = leitor.IsDBNull(leitor.GetOrdinal("foto")) ? null : leitor.GetString("foto");
-
-                        leitor.Close();
-
-                        
-                        if (sessaoUsuario.tipo == 0) 
+                        using (MySqlDataReader leitorRestaurante = comandoRestaurante.ExecuteReader())
                         {
-                            homePage clienteHome = new homePage();
-                            clienteHome.Show();
-                        }
-                        else if (sessaoUsuario.tipo == 1)
-                        {
-                            homePageEmpresa restauranteHome = new homePageEmpresa();
-                            restauranteHome.Show();
-                        }
+                            if (leitorRestaurante.Read())
+                            {
+                                // Preenche a sessão com os dados do restaurante
+                                sessaoUsuario.id = leitorRestaurante.GetInt32("id");
+                                sessaoUsuario.nome = leitorRestaurante.GetString("nome");
+                                sessaoUsuario.email = leitorRestaurante.GetString("email");
+                                sessaoUsuario.senha = leitorRestaurante.GetString("senha");
+                                sessaoUsuario.telefone = leitorRestaurante.GetString("telefone");
+                                sessaoUsuario.rua = leitorRestaurante.GetString("rua");
+                                sessaoUsuario.foto = leitorRestaurante.IsDBNull(leitorRestaurante.GetOrdinal("foto")) ? null : leitorRestaurante.GetString("foto");
 
-                        this.Hide(); // Esconde o formulário de login
+                                // Redireciona para a página de restaurante
+                                homePageEmpresa restauranteHome = new homePageEmpresa();
+                                restauranteHome.Show();
+                                this.Hide(); // Esconde o formulário de login
+                                return; // Sai da função se for um restaurante
+                            }
+                        }
                     }
-                    else
+
+                    // Se não encontrar o restaurante, verifica se é um cliente
+                    string queryCliente = "SELECT id, nome, email, senha, foto FROM cliente WHERE email = @Email AND senha = @Senha;";
+                    using (MySqlCommand comandoCliente = new MySqlCommand(queryCliente, conexao))
                     {
-                        MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        comandoCliente.Parameters.AddWithValue("@Email", email);
+                        comandoCliente.Parameters.AddWithValue("@Senha", senha);
+
+                        using (MySqlDataReader leitorCliente = comandoCliente.ExecuteReader())
+                        {
+                            if (leitorCliente.Read())
+                            {
+                                // Preenche a sessão com os dados do cliente
+                                sessaoUsuario.id = leitorCliente.GetInt32("id");
+                                sessaoUsuario.nome = leitorCliente.GetString("nome");
+                                sessaoUsuario.email = leitorCliente.GetString("email");
+                                sessaoUsuario.senha = leitorCliente.GetString("senha");
+                                sessaoUsuario.foto = leitorCliente.IsDBNull(leitorCliente.GetOrdinal("foto")) ? null : leitorCliente.GetString("foto");
+
+                                // Redireciona para a página do cliente
+                                homePage clienteHome = new homePage();
+                                clienteHome.Show();
+                                this.Hide(); // Esconde o formulário de login
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)

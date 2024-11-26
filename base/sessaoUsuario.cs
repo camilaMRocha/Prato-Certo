@@ -13,7 +13,7 @@ namespace pratocerto
         public static int id { get; set; } // ID do usuário no banco         
         public static string nome { get; set; }// Nome do usuário ou restaurante     
         public static string email { get; set; }// Email do usuário    
-        public static int tipo { get; set; }// 0 = Cliente comum, 1 = Restaurante        
+        //public static int tipo { get; set; }// 0 = Cliente comum, 1 = Restaurante        
         public static string senha { get; set; }// Senha do usuário
         public static string telefone { get; set; }// telefone do restaurante
         public static string rua { get; set; }// rua do restaurante
