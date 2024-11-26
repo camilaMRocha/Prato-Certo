@@ -42,7 +42,7 @@ namespace pratocerto
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);

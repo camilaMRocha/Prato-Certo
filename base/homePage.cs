@@ -68,7 +68,7 @@ namespace pratocerto
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            
+            this.panel1.BackColor = Color.FromArgb(134, 8, 26);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace pratocerto
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            this.panel2.BackColor = Color.FromArgb(134, 8, 26);
         }
     }
 }
