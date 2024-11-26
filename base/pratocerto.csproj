@@ -178,6 +178,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sessaoEmpresa.cs" />
     <Compile Include="sessaoUsuario.cs" />
     <Compile Include="visualizarComentários.cs">
       <SubType>Form</SubType>

@@ -76,17 +76,17 @@ namespace pratocerto
             }
 
             // Validação de campos obrigatórios
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox5.Text) || string.IsNullOrWhiteSpace(textBox6.Text))
             {
-                MessageBox.Show("Por favor, preencha os campos obrigatórios (Nome e Email).", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, preencha os campos obrigatórios (Nome, email, telefone e rua).", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Captura os dados do formulário
             string nome = textBox1.Text;
             string email = textBox2.Text;
-            string telefone = string.IsNullOrWhiteSpace(textBox5.Text) ? null : textBox5.Text;
-            string rua = string.IsNullOrWhiteSpace(textBox6.Text) ? null : textBox6.Text;
+            string telefone = textBox5.Text;
+            string rua = textBox6.Text;
 
             string fotoCaminho = null;
 
@@ -115,15 +115,14 @@ namespace pratocerto
             // Conexão com o banco de dados
             using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
-                string inserir = "INSERT INTO cliente (nome, email, senha, tipo, telefone, rua, foto) " +
-                                 "VALUES (@nome, @email, @senha, @tipo, @telefone, @rua, @foto);";
+                string inserir = "INSERT INTO restaurante (nome, telefone, rua, email, foto, senha) " +
+                                 "VALUES (@nome, @telefone, @rua, @email, @foto, @senha);";
 
                 MySqlCommand comando = new MySqlCommand(inserir, conexao);
 
                 comando.Parameters.AddWithValue("@nome", nome);
                 comando.Parameters.AddWithValue("@email", email);
                 comando.Parameters.AddWithValue("@senha", senha);
-                comando.Parameters.AddWithValue("@tipo", 1); // Tipo 1 para empresa
                 comando.Parameters.AddWithValue("@telefone", telefone ?? (object)DBNull.Value);
                 comando.Parameters.AddWithValue("@rua", rua ?? (object)DBNull.Value);
                 comando.Parameters.AddWithValue("@foto", fotoCaminho ?? (object)DBNull.Value);
