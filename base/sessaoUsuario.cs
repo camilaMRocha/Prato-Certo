@@ -18,7 +18,7 @@ namespace pratocerto
         public static string telefone { get; set; }// telefone do restaurante
         public static string rua { get; set; }// rua do restaurante
         public static string foto { get; set; }// foto de usuário ou restaurante
-
+        public static int status { get; set; }
 
 
     }

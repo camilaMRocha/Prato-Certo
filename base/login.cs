@@ -44,7 +44,7 @@ namespace pratocerto
                     conexao.Open();
 
                     // Verifique primeiro se o usuário é um restaurante
-                    string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto FROM restaurante WHERE email = @Email AND senha = @Senha;";
+                    string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto, status FROM restaurante WHERE email = @Email AND senha = @Senha;";
                     using (MySqlCommand comandoRestaurante = new MySqlCommand(queryRestaurante, conexao))
                     {
                         comandoRestaurante.Parameters.AddWithValue("@Email", email);
@@ -61,6 +61,7 @@ namespace pratocerto
                                 sessaoUsuario.senha = leitorRestaurante.GetString("senha");
                                 sessaoUsuario.telefone = leitorRestaurante.GetString("telefone");
                                 sessaoUsuario.rua = leitorRestaurante.GetString("rua");
+                                sessaoUsuario.status = leitorRestaurante.GetInt32("status");
                                 sessaoUsuario.foto = leitorRestaurante.IsDBNull(leitorRestaurante.GetOrdinal("foto")) ? null : leitorRestaurante.GetString("foto");
 
                                 // Redireciona para a página de restaurante
