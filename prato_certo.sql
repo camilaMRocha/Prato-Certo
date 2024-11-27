@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26/11/2024 às 00:10
+-- Tempo de geração: 26/11/2024 às 22:36
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -46,6 +46,13 @@ CREATE TABLE `cliente` (
   `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `cliente`
+--
+
+INSERT INTO `cliente` (`nome`, `email`, `id`, `senha`, `foto`) VALUES
+('olivia', 'oli@gmail.com', 2, '1234oli1234', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -74,8 +81,16 @@ CREATE TABLE `restaurante` (
   `telefone` varchar(20) DEFAULT NULL,
   `rua` varchar(100) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
-  `foto` varchar(200) DEFAULT NULL
+  `foto` varchar(200) DEFAULT NULL,
+  `senha` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `restaurante`
+--
+
+INSERT INTO `restaurante` (`id`, `nome`, `telefone`, `rua`, `email`, `foto`, `senha`) VALUES
+(5, 'burguer king', '194956565', 'centro', 'king@gmail.com', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\0a2ea47b-3823-48c2-b3de-925ca483e72a.png', 'king1234');
 
 --
 -- Índices para tabelas despejadas
@@ -115,7 +130,7 @@ ALTER TABLE `restaurante`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `prato`
@@ -127,7 +142,7 @@ ALTER TABLE `prato`
 -- AUTO_INCREMENT de tabela `restaurante`
 --
 ALTER TABLE `restaurante`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restrições para tabelas despejadas
