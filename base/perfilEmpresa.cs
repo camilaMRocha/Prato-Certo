@@ -237,6 +237,51 @@ namespace pratocerto
                     }
                 }
             }
-        
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Pegar o ID do restaurante a partir de um TextBox
+                int restauranteId = sessaoUsuario.id;
+
+                // String de conexão com o banco de dados
+                string connectionString = "Server=127.0.0.1;Database=prato_certo;User=root;Password=;";
+
+                // Comando SQL para atualizar o status do restaurante para '0'
+                string sql = "UPDATE restaurante SET status = '0' WHERE id = @restauranteId";
+
+                // Usar o MySqlCommand para executar o comando SQL
+                using (var connection = new MySqlConnection(connectionString))
+                {
+                    // Abrir a conexão
+                    connection.Open();
+
+                    using (var command = new MySqlCommand(sql, connection))
+                    {
+                        // Passar o parâmetro do ID do restaurante
+                        command.Parameters.AddWithValue("@restauranteId", restauranteId);
+
+                        // Executar o comando para atualizar o status
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Restaurante desativado com sucesso!");
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Restaurante não encontrado ou já desativado.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}");
+            }
+
+        }
     }
 }

@@ -44,7 +44,7 @@ namespace pratocerto
                     conexao.Open();
 
                     // Verifique primeiro se o usuário é um restaurante
-                    string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto FROM restaurante WHERE email = @Email AND senha = @Senha;";
+                    string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto, status FROM restaurante WHERE email = @Email AND senha = @Senha;";
                     using (MySqlCommand comandoRestaurante = new MySqlCommand(queryRestaurante, conexao))
                     {
                         comandoRestaurante.Parameters.AddWithValue("@Email", email);
@@ -63,11 +63,23 @@ namespace pratocerto
                                 sessaoUsuario.rua = leitorRestaurante.GetString("rua");
                                 sessaoUsuario.foto = leitorRestaurante.IsDBNull(leitorRestaurante.GetOrdinal("foto")) ? null : leitorRestaurante.GetString("foto");
 
+                                // Verifica o status do restaurante
+                                int status = leitorRestaurante.GetInt32("status");
+                                if (status == 0) // Se o status for 0 (Desativado)
+                                {
+                                    // Se o restaurante estiver desativado, reative-o
+                                    AtivarRestaurante(sessaoUsuario.id);
+                                }
+
                                 // Redireciona para a página de restaurante
                                 homePageEmpresa restauranteHome = new homePageEmpresa();
                                 restauranteHome.Show();
                                 this.Hide(); // Esconde o formulário de login
                                 return; // Sai da função se for um restaurante
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
@@ -109,6 +121,43 @@ namespace pratocerto
             }
 
 
+        }
+
+        private void AtivarRestaurante(int restauranteId)
+        {
+            string connectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;";
+            using (MySqlConnection conexao = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    conexao.Open();
+
+                    // Comando SQL para atualizar o status do restaurante para 1 (Ativo)
+                    string query = "UPDATE restaurante SET status = 1 WHERE id = @restauranteId AND status = 0";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                    {
+                        // Adiciona o parâmetro para o ID do restaurante
+                        cmd.Parameters.AddWithValue("@restauranteId", restauranteId);
+
+                        // Executa o comando de atualização
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Restaurante reativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi possível reativar o restaurante. Verifique se ele está desativado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao reativar o restaurante: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
