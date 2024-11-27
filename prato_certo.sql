@@ -76,7 +76,7 @@ CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nome` varchar(200) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
-  `senha` varchar(50) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
   `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -122,7 +122,7 @@ CREATE TABLE `restaurante` (
   `email` varchar(200) DEFAULT NULL,
   `telefone` varchar(20) DEFAULT NULL,
   `rua` varchar(200) DEFAULT NULL,
-  `senha` varchar(50) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
   `foto` varchar(200) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
