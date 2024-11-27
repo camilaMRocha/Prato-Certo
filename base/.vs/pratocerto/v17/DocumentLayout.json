@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,20 +14,55 @@
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< Updated upstream
+=======
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
+=======
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -49,6 +85,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:comentarioempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+=======
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +98,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CadastroUsuario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs",
+              "RelativeDocumentMoniker": "CadastroUsuario.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs [Design]",
+              "RelativeToolTip": "CadastroUsuario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:58.439Z"
+            },
+            {
+              "$type": "Document",
+>>>>>>> Stashed changes
               "DocumentIndex": 0,
               "Title": "CadastroEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeDocumentMoniker": "CadastroEmpresa.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeToolTip": "CadastroEmpresa.cs",
+<<<<<<< Updated upstream
               "ViewState": "AgIAAKAAAAAAAAAAAAArwD4AAAAMAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
+>>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:13:20.219Z",
               "EditorCaption": ""
@@ -152,6 +214,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs [Design]",
               "RelativeToolTip": "login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-11-26T23:11:12.034Z",
               "EditorCaption": " [Design]"
             },
@@ -167,6 +230,44 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-26T23:11:14.323Z",
               "EditorCaption": ""
+=======
+              "WhenOpened": "2024-11-27T20:10:39.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "homePage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
+              "RelativeDocumentMoniker": "homePage.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs [Design]",
+              "RelativeToolTip": "homePage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:09:35.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "homePageEmpresa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
+              "RelativeDocumentMoniker": "homePageEmpresa.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs [Design]",
+              "RelativeToolTip": "homePageEmpresa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:23.55Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "perfilEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "RelativeDocumentMoniker": "perfilEmpresa.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "RelativeToolTip": "perfilEmpresa.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAD4vzsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:18.495Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -177,7 +278,11 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs [Design]",
               "RelativeToolTip": "comentarioComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-11-26T23:31:10.852Z"
+=======
+              "WhenOpened": "2024-11-27T20:10:01.287Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -188,7 +293,11 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs [Design]",
               "RelativeToolTip": "CadastroUsuario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-11-26T23:11:24.724Z"
+=======
+              "WhenOpened": "2024-11-27T20:09:36.198Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
@@ -199,7 +308,22 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioEmpresa.cs [Design]",
               "RelativeToolTip": "comentarioEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-11-26T19:14:44.078Z"
+=======
+              "WhenOpened": "2024-11-27T20:09:27.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "perfilEmpresa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "RelativeDocumentMoniker": "perfilEmpresa.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs [Design]",
+              "RelativeToolTip": "perfilEmpresa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:08:56.01Z"
+>>>>>>> Stashed changes
             }
           ]
         }
