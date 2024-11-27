@@ -4,12 +4,16 @@
   "Documents": [
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+<<<<<<< Updated upstream
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -89,6 +93,8 @@
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -99,10 +105,14 @@
         {
           "DockedWidth": 200,
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
 =======
           "SelectedChildIndex": 1,
           "Children": [
@@ -120,6 +130,8 @@
             {
               "$type": "Document",
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
               "DocumentIndex": 0,
               "Title": "CadastroEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
@@ -127,12 +139,18 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeToolTip": "CadastroEmpresa.cs",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
               "ViewState": "AgIAAKAAAAAAAAAAAAArwD4AAAAMAAAAAAAAAA==",
 =======
               "ViewState": "AgIAAHAAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
 >>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T22:13:20.219Z",
+=======
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAD4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:20:46.408Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -144,6 +162,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs [Design]",
               "RelativeToolTip": "CadastroEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2024-11-27T22:13:18.852Z",
               "EditorCaption": " [Design]"
             },
@@ -323,6 +342,10 @@
               "RelativeToolTip": "perfilEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:08:56.01Z"
+>>>>>>> Stashed changes
+=======
+              "WhenOpened": "2024-11-27T22:20:44.6Z",
+              "EditorCaption": " [Design]"
 >>>>>>> Stashed changes
             }
           ]
