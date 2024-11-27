@@ -115,8 +115,8 @@ namespace pratocerto
             // Conexão com o banco de dados
             using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
-                string inserir = "INSERT INTO restaurante (nome, telefone, rua, email, foto, senha) " +
-                                 "VALUES (@nome, @telefone, @rua, @email, @foto, @senha);";
+                string inserir = "INSERT INTO restaurante (nome, telefone, rua, email, foto, senha, status) " +
+                                 "VALUES (@nome, @telefone, @rua, @email, @foto, @senha, @status);";
 
                 MySqlCommand comando = new MySqlCommand(inserir, conexao);
 
@@ -126,6 +126,7 @@ namespace pratocerto
                 comando.Parameters.AddWithValue("@telefone", telefone ?? (object)DBNull.Value);
                 comando.Parameters.AddWithValue("@rua", rua ?? (object)DBNull.Value);
                 comando.Parameters.AddWithValue("@foto", fotoCaminho ?? (object)DBNull.Value);
+                comando.Parameters.AddWithValue("@status", 1);
 
                 try
                 {
