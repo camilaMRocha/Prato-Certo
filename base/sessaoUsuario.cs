@@ -18,13 +18,8 @@ namespace pratocerto
         public static string telefone { get; set; }// telefone do restaurante
         public static string rua { get; set; }// rua do restaurante
         public static string foto { get; set; }// foto de usuário ou restaurante
-<<<<<<< Updated upstream
-        public static int status { get; set; }
+        public static int status { get; set; }//restaurante ativo = 1; desativado =2.
 
-=======
-
-        public static string status { get; set; }
->>>>>>> Stashed changes
 
     }
 }
