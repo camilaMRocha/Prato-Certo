@@ -283,5 +283,17 @@ namespace pratocerto
             }
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            adicionarComida addcomida = new adicionarComida();
+            addcomida.Show();
+            
+        }
     }
 }

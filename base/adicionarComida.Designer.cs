@@ -213,7 +213,7 @@ namespace pratocerto
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(116, 514);
+            this.label8.Location = new System.Drawing.Point(116, 523);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(484, 84);
             this.label8.TabIndex = 48;
@@ -226,7 +226,7 @@ namespace pratocerto
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(621, 541);
+            this.button7.Location = new System.Drawing.Point(475, 469);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(101, 30);
             this.button7.TabIndex = 47;
@@ -285,6 +285,7 @@ namespace pratocerto
             this.button2.TabIndex = 40;
             this.button2.Text = "Adicionar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -331,7 +332,7 @@ namespace pratocerto
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(848, 487);
+            this.ClientSize = new System.Drawing.Size(848, 565);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);

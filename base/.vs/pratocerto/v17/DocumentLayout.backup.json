@@ -1,53 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\",
+  "WorkspaceRootPath": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\adicionarcomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:adicionarcomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\bazuk\\documents\\github\\prato-certo\\base\\adicionarcomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:adicionarcomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:cadastroempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -58,63 +74,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeToolTip": "login.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAD4vyQAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "perfilUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeDocumentMoniker": "perfilUsuario.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeToolTip": "perfilUsuario.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAswNgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:01:31.847Z",
+              "WhenOpened": "2024-11-29T00:25:57.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs [Design]",
-              "RelativeToolTip": "login.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "adicionarComida.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\adicionarComida.cs",
+              "RelativeDocumentMoniker": "adicionarComida.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\adicionarComida.cs [Design]",
+              "RelativeToolTip": "adicionarComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:39.993Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "homePage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
-              "RelativeDocumentMoniker": "homePage.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs [Design]",
-              "RelativeToolTip": "homePage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:35.166Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "homePageEmpresa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
-              "RelativeDocumentMoniker": "homePageEmpresa.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs [Design]",
-              "RelativeToolTip": "homePageEmpresa.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:23.55Z",
+              "WhenOpened": "2024-11-28T23:51:22.95Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "perfilEmpresa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "Title": "CadastroUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroUsuario.cs",
+              "RelativeDocumentMoniker": "CadastroUsuario.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroUsuario.cs",
+              "RelativeToolTip": "CadastroUsuario.cs",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAmwKUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T23:57:36.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "perfilEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeDocumentMoniker": "perfilEmpresa.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs [Design]",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "RelativeToolTip": "perfilEmpresa.cs",
+              "ViewState": "AgIAABcBAAAAAAAAAAAUwCgBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:18.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "perfilUsuario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeDocumentMoniker": "perfilUsuario.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilUsuario.cs [Design]",
+              "RelativeToolTip": "perfilUsuario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T00:30:04.791Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "perfilEmpresa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilEmpresa.cs",
+              "RelativeDocumentMoniker": "perfilEmpresa.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\perfilEmpresa.cs [Design]",
               "RelativeToolTip": "perfilEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:08:56.01Z",
@@ -122,35 +153,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "perfilEmpresa.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
-              "RelativeDocumentMoniker": "perfilEmpresa.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
-              "RelativeToolTip": "perfilEmpresa.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAD4vw4BAAApAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "CadastroUsuario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroUsuario.cs",
+              "RelativeDocumentMoniker": "CadastroUsuario.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroUsuario.cs [Design]",
+              "RelativeToolTip": "CadastroUsuario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:18.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T20:10:58.439Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\login.cs [Design]",
+              "RelativeToolTip": "login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:39.993Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "adicionarComida.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\adicionarComida.cs",
+              "RelativeDocumentMoniker": "adicionarComida.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\adicionarComida.cs",
+              "RelativeToolTip": "adicionarComida.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwGEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T23:57:57.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\login.cs",
+              "RelativeToolTip": "login.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:01:31.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "homePageEmpresa.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homePageEmpresa.cs",
+              "RelativeDocumentMoniker": "homePageEmpresa.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:23.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "CadastroEmpresa.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeDocumentMoniker": "CadastroEmpresa.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs [Design]",
-              "RelativeToolTip": "CadastroEmpresa.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:10:43.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "CadastroEmpresa.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeDocumentMoniker": "CadastroEmpresa.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeToolTip": "CadastroEmpresa.cs",
               "ViewState": "AgIAAJkAAAAAAAAAAAD4v6YAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -158,45 +237,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CadastroUsuario.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs",
-              "RelativeDocumentMoniker": "CadastroUsuario.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs [Design]",
-              "RelativeToolTip": "CadastroUsuario.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:58.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "comentarioComida.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\comentarioComida.cs",
               "RelativeDocumentMoniker": "comentarioComida.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs [Design]",
-              "RelativeToolTip": "comentarioComida.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:10:01.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "homePage.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homePage.cs",
               "RelativeDocumentMoniker": "homePage.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homePage.cs",
               "RelativeToolTip": "homePage.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAIA9wFwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:36.198Z"
+              "WhenOpened": "2024-11-27T20:09:36.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "homePageEmpresa.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homePageEmpresa.cs",
               "RelativeDocumentMoniker": "homePageEmpresa.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
+              "ToolTip": "C:\\Users\\bazuk\\Documents\\GitHub\\Prato-Certo\\base\\homePageEmpresa.cs",
               "RelativeToolTip": "homePageEmpresa.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAtwCkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
