@@ -339,5 +339,51 @@ namespace pratocerto
 
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Tem certeza de que deseja deletar este cliente?",
+                                        "Confirmação",
+                                        MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Question);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD=;"))
+                {
+                    try
+                    {
+                        conexao.Open();
+
+                        // Comando SQL para deletar cliente com base no ID
+                        string queryDeletar = "DELETE FROM cliente WHERE id = @IdCliente";
+
+                        using (MySqlCommand comando = new MySqlCommand(queryDeletar, conexao))
+                        {
+                            // Substitua pelo ID do cliente que deseja deletar
+                            comando.Parameters.AddWithValue("@IdCliente", sessaoUsuario.id);
+
+                            int linhasAfetadas = comando.ExecuteNonQuery();
+
+                            if (linhasAfetadas > 0)
+                            {
+                                MessageBox.Show("Cliente deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Opcional: Redirecionar ou atualizar a interface
+                                this.Close(); // Fecha o formulário atual
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nenhum cliente foi encontrado para deletar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Erro ao tentar deletar cliente: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
