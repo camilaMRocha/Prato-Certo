@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +11,28 @@
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\cadastrousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -58,47 +66,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeToolTip": "login.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAD4vyQAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "perfilUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeDocumentMoniker": "perfilUsuario.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeToolTip": "perfilUsuario.cs",
+              "ViewState": "AgIAADQBAAAAAAAAAAAIwBsBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:01:31.847Z",
+              "WhenOpened": "2024-11-29T21:43:19.569Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs [Design]",
-              "RelativeToolTip": "login.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "perfilUsuario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilUsuario.cs",
+              "RelativeDocumentMoniker": "perfilUsuario.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilUsuario.cs [Design]",
+              "RelativeToolTip": "perfilUsuario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:39.993Z",
+              "WhenOpened": "2024-11-29T21:43:17.641Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "homePage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
               "RelativeDocumentMoniker": "homePage.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs [Design]",
               "RelativeToolTip": "homePage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:35.166Z"
+              "WhenOpened": "2024-11-27T20:09:35.166Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "homePageEmpresa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
               "RelativeDocumentMoniker": "homePageEmpresa.cs",
@@ -110,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "perfilEmpresa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeDocumentMoniker": "perfilEmpresa.cs",
@@ -122,20 +131,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "perfilEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeDocumentMoniker": "perfilEmpresa.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeToolTip": "perfilEmpresa.cs",
-              "ViewState": "AgIAAP0AAAAAAAAAAAD4vw4BAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAtwEUBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:10:18.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
+              "Title": "login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs [Design]",
+              "RelativeToolTip": "login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:10:39.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
+              "RelativeToolTip": "login.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAIA2wCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:01:31.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CadastroEmpresa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeDocumentMoniker": "CadastroEmpresa.cs",
@@ -146,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "CadastroEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroEmpresa.cs",
               "RelativeDocumentMoniker": "CadastroEmpresa.cs",
@@ -158,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "CadastroUsuario.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\CadastroUsuario.cs",
               "RelativeDocumentMoniker": "CadastroUsuario.cs",
@@ -169,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "comentarioComida.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs",
               "RelativeDocumentMoniker": "comentarioComida.cs",
@@ -180,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "homePage.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs",
               "RelativeDocumentMoniker": "homePage.cs",
@@ -188,11 +221,12 @@
               "RelativeToolTip": "homePage.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAIA9wFwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:36.198Z"
+              "WhenOpened": "2024-11-27T20:09:36.198Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "homePageEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePageEmpresa.cs",
               "RelativeDocumentMoniker": "homePageEmpresa.cs",
@@ -200,7 +234,8 @@
               "RelativeToolTip": "homePageEmpresa.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAtwCkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:27.802Z"
+              "WhenOpened": "2024-11-27T20:09:27.802Z",
+              "EditorCaption": ""
             }
           ]
         }

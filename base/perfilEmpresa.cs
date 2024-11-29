@@ -94,7 +94,44 @@ namespace pratocerto
 
         private void button5_Click(object sender, EventArgs e)
         {
+            string novoTel = textBox4.Text;
 
+            if (string.IsNullOrWhiteSpace(novoTel))
+            {
+                MessageBox.Show("Por favor, insirá um novo telefone válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; "))
+            {
+                string atualizar = "UPDATE restaurante SET telefone = @novoTel WHERE id = @idUsuario";
+
+                MySqlCommand comando = new MySqlCommand(atualizar, conexao);
+                comando.Parameters.AddWithValue("@novoTel", novoTel);
+                comando.Parameters.AddWithValue("@idUsuario", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        sessaoUsuario.telefone = novoTel;
+                        MessageBox.Show("Telefone foi alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma alteração foi realizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Errp ao alterar o telefone.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
@@ -282,6 +319,176 @@ namespace pratocerto
                 MessageBox.Show($"Erro: {ex.Message}");
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string novoNome = textBox2.Text;
+
+            if (string.IsNullOrWhiteSpace(novoNome))
+            {
+                MessageBox.Show("Por favor, insirá um novo nome válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; "))
+            {
+                string atualizar = "UPDATE restaurante SET nome = @novoNome WHERE id = @idUsuario";
+
+                MySqlCommand comando = new MySqlCommand(atualizar, conexao);
+                comando.Parameters.AddWithValue("@novoNome", novoNome);
+                comando.Parameters.AddWithValue("@idUsuario", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        sessaoUsuario.nome = novoNome;
+                        MessageBox.Show("Nome foi alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        label1.Text = $"{sessaoUsuario.nome}";
+                        label2.Text = $"{sessaoUsuario.nome}";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma alteração foi realizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Errp ao alterar o nome.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string novoEmail = textBox3.Text;
+
+            if (string.IsNullOrWhiteSpace(novoEmail))
+            {
+                MessageBox.Show("Por favor, insirá um novo E-mail válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; "))
+            {
+                string atualizar = "UPDATE restaurante SET email = @novoEmail WHERE id = @idUsuario";
+
+                MySqlCommand comando = new MySqlCommand(atualizar, conexao);
+                comando.Parameters.AddWithValue("@novoEmail", novoEmail);
+                comando.Parameters.AddWithValue("@idUsuario", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        sessaoUsuario.email = novoEmail;
+                        MessageBox.Show("E-mail foi alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma alteração foi realizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Errp ao alterar o e-mail.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string novoLocal = textBox5.Text;
+
+            if (string.IsNullOrWhiteSpace(novoLocal))
+            {
+                MessageBox.Show("Por favor, insirá um local nome válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; "))
+            {
+                string atualizar = "UPDATE restaurante SET rua = @novoLocal WHERE id = @idUsuario";
+
+                MySqlCommand comando = new MySqlCommand(atualizar, conexao);
+                comando.Parameters.AddWithValue("@novoLocal", novoLocal);
+                comando.Parameters.AddWithValue("@idUsuario", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        sessaoUsuario.rua = novoLocal;
+                        MessageBox.Show("Local foi alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma alteração foi realizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Errp ao alterar o local.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            string novoSenha = textBox6.Text;
+
+            if (string.IsNullOrWhiteSpace(novoSenha))
+            {
+                MessageBox.Show("Por favor, insirá um novo senha válido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; "))
+            {
+                string atualizar = "UPDATE restaurante SET senha = @novoSenha WHERE id = @idUsuario";
+
+                MySqlCommand comando = new MySqlCommand(atualizar, conexao);
+                comando.Parameters.AddWithValue("@novoSenha", novoSenha);
+                comando.Parameters.AddWithValue("@idUsuario", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int linhasAfetadas = comando.ExecuteNonQuery();
+
+                    if (linhasAfetadas > 0)
+                    {
+                        sessaoUsuario.senha = novoSenha;
+                        MessageBox.Show("Senha foi alterado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nenhuma alteração foi realizada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Errp ao alterar o senha.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
     }
 }
