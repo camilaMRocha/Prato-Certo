@@ -113,9 +113,11 @@ namespace pratocerto
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 15);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(60, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(59, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
@@ -130,14 +132,12 @@ namespace pratocerto
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -215,10 +215,9 @@ namespace pratocerto
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
             this.label8.Location = new System.Drawing.Point(116, 514);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(484, 84);
+            this.label8.Size = new System.Drawing.Size(544, 56);
             this.label8.TabIndex = 48;
-            this.label8.Text = "Ao adicionar a agora, poderá alterar alguma \r\ninformação se necessário. Caso quei" +
-    "ra \r\nadicionar um novo prato, volte ao perfil. ";
+            this.label8.Text = "Ao adicionar o prato agora poderá alterar alguma \r\ninformação se necessário. \r\n";
             // 
             // button7
             // 
@@ -226,7 +225,7 @@ namespace pratocerto
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(621, 541);
+            this.button7.Location = new System.Drawing.Point(657, 523);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(101, 30);
             this.button7.TabIndex = 47;
@@ -257,7 +256,6 @@ namespace pratocerto
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::pratocerto.Properties.Resources.dollynho;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(15, 20);
             this.pictureBox3.Name = "pictureBox3";
@@ -285,6 +283,7 @@ namespace pratocerto
             this.button2.TabIndex = 40;
             this.button2.Text = "Adicionar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
@@ -336,8 +335,8 @@ namespace pratocerto
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Name = "adicionarComida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "adicionarComida";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
