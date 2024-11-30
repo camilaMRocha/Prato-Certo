@@ -34,14 +34,11 @@ namespace pratocerto
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,12 +50,12 @@ namespace pratocerto
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -87,8 +84,8 @@ namespace pratocerto
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -110,15 +107,6 @@ namespace pratocerto
             this.button1.TabIndex = 3;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(540, 10);
@@ -130,7 +118,6 @@ namespace pratocerto
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 37);
@@ -143,7 +130,6 @@ namespace pratocerto
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.label5);
@@ -185,28 +171,6 @@ namespace pratocerto
             this.label6.TabIndex = 49;
             this.label6.Text = "Foto do prato";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(121, 469);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(221, 42);
-            this.panel3.TabIndex = 39;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.label2.Location = new System.Drawing.Point(-1, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(224, 31);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Deseja cadastrar?";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -226,9 +190,9 @@ namespace pratocerto
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(475, 469);
+            this.button7.Location = new System.Drawing.Point(493, 401);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 30);
+            this.button7.Size = new System.Drawing.Size(137, 57);
             this.button7.TabIndex = 47;
             this.button7.Text = "Cadastrar";
             this.button7.UseVisualStyleBackColor = false;
@@ -257,7 +221,6 @@ namespace pratocerto
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::pratocerto.Properties.Resources.dollynho;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(15, 20);
             this.pictureBox3.Name = "pictureBox3";
@@ -327,6 +290,18 @@ namespace pratocerto
             this.textBox3.Size = new System.Drawing.Size(349, 30);
             this.textBox3.TabIndex = 43;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(60, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 19);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "label9";
+            // 
             // adicionarComida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,8 +322,6 @@ namespace pratocerto
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -360,7 +333,6 @@ namespace pratocerto
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -375,9 +347,8 @@ namespace pratocerto
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label9;
     }
 }
