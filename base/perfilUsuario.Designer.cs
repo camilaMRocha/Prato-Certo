@@ -191,7 +191,6 @@ namespace pratocerto
             this.button7.TabIndex = 15;
             this.button7.Text = "Excluir";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button5
             // 
@@ -205,7 +204,6 @@ namespace pratocerto
             this.button5.TabIndex = 11;
             this.button5.Text = "Alterar ";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label5
             // 
@@ -240,7 +238,6 @@ namespace pratocerto
             this.button4.TabIndex = 8;
             this.button4.Text = "Alterar ";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
@@ -274,7 +271,6 @@ namespace pratocerto
             this.button3.TabIndex = 5;
             this.button3.Text = "Alterar ";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
