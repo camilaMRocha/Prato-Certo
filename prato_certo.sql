@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04-Nov-2024 às 12:04
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.1.0
+-- Tempo de geração: 27/11/2024 às 20:41
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,124 +24,191 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `avalia`
+-- Estrutura para tabela `avaliacao`
 --
 
-CREATE TABLE `avalia` (
-  `FK_cliente_id` int(11) DEFAULT NULL,
-  `FK_prato_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `avaliacao` (
+  `fk_prato_id` int(11) DEFAULT NULL,
+  `fk_cliente_id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
+  `data` int(11) DEFAULT NULL,
+  `nota` int(11) DEFAULT NULL,
+  `comentario` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `avaliacao`
+--
+
+INSERT INTO `avaliacao` (`fk_prato_id`, `fk_cliente_id`, `id`, `data`, `nota`, `comentario`) VALUES
+(1, 1, 1, 1732736013, 4, 'Gostei muito do prato!'),
+(1, 1, 2, 1732736084, 3, 'Bom, mas pode melhorar!'),
+(1, 1, 3, 1732736189, 3, 'Bom, mas pode melhorar!');
+
+--
+-- Acionadores `avaliacao`
+--
+DELIMITER $$
+CREATE TRIGGER `atualizar_media_nota` AFTER INSERT ON `avaliacao` FOR EACH ROW BEGIN
+    DECLARE novo_media_nota DECIMAL(5,2);
+    
+    -- Calcular a nova média das notas para o prato após a inserção de uma avaliação
+    SELECT AVG(nota) 
+    INTO novo_media_nota
+    FROM avaliacao
+    WHERE fk_prato_id = NEW.fk_prato_id;
+    
+    -- Atualizar a média na tabela prato
+    UPDATE prato
+    SET media_nota = novo_media_nota
+    WHERE id = NEW.fk_prato_id;
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `cliente`
+-- Estrutura para tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
-  `nome` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  `senha` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nome` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
+(1, 'Cliente Teste', 'cliente@teste.com', 'senha123', 'cliente.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `prato`
+-- Estrutura para tabela `prato`
 --
 
 CREATE TABLE `prato` (
-  `avaliacao` varchar(1000) DEFAULT NULL,
-  `restaurante` varchar(100) DEFAULT NULL,
   `id` int(11) NOT NULL,
+  `media_nota` int(11) DEFAULT NULL,
   `preco` int(11) DEFAULT NULL,
-  `nome` varchar(100) DEFAULT NULL,
-  `descricao` varchar(1000) DEFAULT NULL,
-  `FK_restaurante_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `descricao` varchar(200) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `nome` varchar(200) DEFAULT NULL,
+  `fk_restaurante_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `prato`
+--
+
+INSERT INTO `prato` (`id`, `media_nota`, `preco`, `descricao`, `foto`, `nome`, `fk_restaurante_id`) VALUES
+(1, 3, 30, 'Prato Teste de Avaliação', 'prato.jpg', 'Prato Teste', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `restaurante`
+-- Estrutura para tabela `restaurante`
 --
 
 CREATE TABLE `restaurante` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
   `telefone` varchar(20) DEFAULT NULL,
-  `rua` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `rua` varchar(200) DEFAULT NULL,
+  `senha` varchar(20) DEFAULT NULL,
+  `foto` varchar(200) DEFAULT NULL,
+  `status` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `restaurante`
+--
+
+INSERT INTO `restaurante` (`id`, `nome`, `email`, `telefone`, `rua`, `senha`, `foto`, `status`) VALUES
+(1, 'Restaurante Teste', 'teste@restaurante.com', '1234567890', 'Rua Teste', 1234, 'foto.jpg', 'Ativo');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `avalia`
+-- Índices de tabela `avaliacao`
 --
-ALTER TABLE `avalia`
-  ADD KEY `FK_avalia_0` (`FK_cliente_id`),
-  ADD KEY `FK_avalia_1` (`FK_prato_id`);
+ALTER TABLE `avaliacao`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `FK_avaliacao_2` (`fk_prato_id`),
+  ADD KEY `FK_avaliacao_3` (`fk_cliente_id`);
 
 --
--- Índices para tabela `cliente`
+-- Índices de tabela `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `prato`
+-- Índices de tabela `prato`
 --
 ALTER TABLE `prato`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_prato_1` (`FK_restaurante_id`);
+  ADD KEY `FK_prato_2` (`fk_restaurante_id`);
 
 --
--- Índices para tabela `restaurante`
+-- Índices de tabela `restaurante`
 --
 ALTER TABLE `restaurante`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `avaliacao`
+--
+ALTER TABLE `avaliacao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `prato`
 --
 ALTER TABLE `prato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `restaurante`
 --
 ALTER TABLE `restaurante`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `avalia`
+-- Restrições para tabelas `avaliacao`
 --
-ALTER TABLE `avalia`
-  ADD CONSTRAINT `FK_avalia_0` FOREIGN KEY (`FK_cliente_id`) REFERENCES `cliente` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_avalia_1` FOREIGN KEY (`FK_prato_id`) REFERENCES `prato` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `avaliacao`
+  ADD CONSTRAINT `FK_avaliacao_2` FOREIGN KEY (`fk_prato_id`) REFERENCES `prato` (`id`) ON DELETE SET NULL,
+  ADD CONSTRAINT `FK_avaliacao_3` FOREIGN KEY (`fk_cliente_id`) REFERENCES `cliente` (`id`) ON DELETE SET NULL;
 
 --
--- Limitadores para a tabela `prato`
+-- Restrições para tabelas `prato`
 --
 ALTER TABLE `prato`
-  ADD CONSTRAINT `FK_prato_1` FOREIGN KEY (`FK_restaurante_id`) REFERENCES `restaurante` (`id`);
+  ADD CONSTRAINT `FK_prato_2` FOREIGN KEY (`fk_restaurante_id`) REFERENCES `restaurante` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
