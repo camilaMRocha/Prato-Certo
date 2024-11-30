@@ -23,7 +23,7 @@ namespace pratocerto
             conexao.Open();
 
             label1.Text = $"{sessaoUsuario.nome}!";
-            label2.Text = $"{sessaoUsuario.nome}!";
+            label2.Text = $"{sessaoUsuario.nome}";
 
             textBox2.Text = sessaoUsuario.nome;
             textBox3.Text = sessaoUsuario.email;
@@ -489,6 +489,13 @@ namespace pratocerto
                 }
 
             }
+        }
+
+        private void button10_Click_1(object sender, EventArgs e)
+        {
+            adicionarComida AdiCom = new adicionarComida();
+            AdiCom.Show();
+            this.Close();
         }
     }
 }
