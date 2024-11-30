@@ -39,7 +39,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 ## Histórias de Usuário
 
 1. **Usuário Comum ou Gerente do Restaurante**  
-   *Como usuário, quero me cadastrar no aplicativo, para ter acesso às páginas.*  
+   *Como usuário, quero ver os melhores pratos do programa.*  
 
    
 2. **Usuário Comum**  
