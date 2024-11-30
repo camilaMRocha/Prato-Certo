@@ -34,18 +34,16 @@ namespace pratocerto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string email = textBox1.Text.Trim();
-            string senha = textBox2.Text.Trim();
+            string email = textBox1.Text;
+            string senha = textBox2.Text;
 
-            bool loginValido = false; // Controlador para evitar múltiplas ações simultâneas
-
-            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD=;"))
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
                 try
                 {
                     conexao.Open();
 
-                    // Verifica primeiro na tabela de restaurantes
+                    // Verifique primeiro se o usuário é um restaurante
                     string queryRestaurante = "SELECT id, nome, email, senha, telefone, rua, foto, status FROM restaurante WHERE email = @Email AND senha = @Senha;";
                     using (MySqlCommand comandoRestaurante = new MySqlCommand(queryRestaurante, conexao))
                     {
@@ -56,10 +54,7 @@ namespace pratocerto
                         {
                             if (leitorRestaurante.Read())
                             {
-                                // Login bem-sucedido como restaurante
-                                loginValido = true;
-
-                                // Preencher dados de sessão
+                                // Preenche a sessão com os dados do restaurante
                                 sessaoUsuario.id = leitorRestaurante.GetInt32("id");
                                 sessaoUsuario.nome = leitorRestaurante.GetString("nome");
                                 sessaoUsuario.email = leitorRestaurante.GetString("email");
@@ -68,58 +63,55 @@ namespace pratocerto
                                 sessaoUsuario.rua = leitorRestaurante.GetString("rua");
                                 sessaoUsuario.foto = leitorRestaurante.IsDBNull(leitorRestaurante.GetOrdinal("foto")) ? null : leitorRestaurante.GetString("foto");
 
-                                // Verifica status
-                                if (leitorRestaurante.GetInt32("status") == 0)
+                                // Verifica o status do restaurante
+                                int status = leitorRestaurante.GetInt32("status");
+                                if (status == 0) // Se o status for 0 (Desativado)
                                 {
+                                    // Se o restaurante estiver desativado, reative-o
                                     AtivarRestaurante(sessaoUsuario.id);
                                 }
 
-                                // Redireciona para a homepage de restaurante
+                                // Redireciona para a página de restaurante
                                 homePageEmpresa restauranteHome = new homePageEmpresa();
                                 restauranteHome.Show();
-                                this.Hide();
-                                return;
+                                this.Hide(); // Esconde o formulário de login
+                                return; // Sai da função se for um restaurante
                             }
-                        }
-                    }
-
-                    // Se não for restaurante, verifica na tabela de clientes
-                    if (!loginValido)
-                    {
-                        string queryCliente = "SELECT id, nome, email, senha, foto FROM cliente WHERE email = @Email AND senha = @Senha;";
-                        using (MySqlCommand comandoCliente = new MySqlCommand(queryCliente, conexao))
-                        {
-                            comandoCliente.Parameters.AddWithValue("@Email", email);
-                            comandoCliente.Parameters.AddWithValue("@Senha", senha);
-
-                            using (MySqlDataReader leitorCliente = comandoCliente.ExecuteReader())
+                            else
                             {
-                                if (leitorCliente.Read())
-                                {
-                                    // Login bem-sucedido como cliente
-                                    loginValido = true;
-
-                                    // Preencher dados de sessão
-                                    sessaoUsuario.id = leitorCliente.GetInt32("id");
-                                    sessaoUsuario.nome = leitorCliente.GetString("nome");
-                                    sessaoUsuario.email = leitorCliente.GetString("email");
-                                    sessaoUsuario.senha = leitorCliente.GetString("senha");
-                                    sessaoUsuario.foto = leitorCliente.IsDBNull(leitorCliente.GetOrdinal("foto")) ? null : leitorCliente.GetString("foto");
-
-                                    // Redireciona para a homepage do cliente
-                                    homePage clienteHome = new homePage();
-                                    clienteHome.Show();
-                                    this.Hide();
-                                    return;
-                                }
+                                MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
 
-                    // Se nenhum login foi validado, exibe mensagem de erro
-                    if (!loginValido)
+                    // Se não encontrar o restaurante, verifica se é um cliente
+                    string queryCliente = "SELECT id, nome, email, senha, foto FROM cliente WHERE email = @Email AND senha = @Senha;";
+                    using (MySqlCommand comandoCliente = new MySqlCommand(queryCliente, conexao))
                     {
-                        MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        comandoCliente.Parameters.AddWithValue("@Email", email);
+                        comandoCliente.Parameters.AddWithValue("@Senha", senha);
+
+                        using (MySqlDataReader leitorCliente = comandoCliente.ExecuteReader())
+                        {
+                            if (leitorCliente.Read())
+                            {
+                                // Preenche a sessão com os dados do cliente
+                                sessaoUsuario.id = leitorCliente.GetInt32("id");
+                                sessaoUsuario.nome = leitorCliente.GetString("nome");
+                                sessaoUsuario.email = leitorCliente.GetString("email");
+                                sessaoUsuario.senha = leitorCliente.GetString("senha");
+                                sessaoUsuario.foto = leitorCliente.IsDBNull(leitorCliente.GetOrdinal("foto")) ? null : leitorCliente.GetString("foto");
+
+                                // Redireciona para a página do cliente
+                                homePage clienteHome = new homePage();
+                                clienteHome.Show();
+                                this.Hide(); // Esconde o formulário de login
+                            }
+                            else
+                            {
+                                MessageBox.Show("Email ou senha incorretos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
