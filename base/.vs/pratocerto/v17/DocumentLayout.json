@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -103,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "perfilEmpresa.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeDocumentMoniker": "perfilEmpresa.cs",
@@ -115,26 +115,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "perfilEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeDocumentMoniker": "perfilEmpresa.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs",
               "RelativeToolTip": "perfilEmpresa.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAtwEUBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUDAAAAAAAAAAAkwDIDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T20:10:18.495Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "login.cs",
               "DocumentMoniker": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
               "RelativeDocumentMoniker": "login.cs",
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs",
               "RelativeToolTip": "login.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAjwBUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAtwBUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T23:01:31.847Z",
               "EditorCaption": ""
