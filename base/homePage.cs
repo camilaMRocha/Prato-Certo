@@ -225,7 +225,81 @@ namespace pratocerto
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            string nomePrato = textBox1.Text.Trim();
+
+            if (string.IsNullOrEmpty(nomePrato))
+            {
+                MessageBox.Show("Por favor, insira o nome do prato.");
+                return;
+            }
+            MySqlConnection conexao = new MySqlConnection();
+            conexao.ConnectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ";
+
+            {
+                try
+                {
+                    conexao.Open();
+
+                    string query = @"SELECT prato.*, restaurante.nome AS NomeRestaurante
+                                    FROM prato 
+                                 JOIN restaurante  ON prato.fk_restaurante_id = restaurante.id
+                                   WHERE prato.nome = @NomePrato;";
+
+                    using (MySqlCommand command = new MySqlCommand(query, conexao))
+                    {
+                        command.Parameters.AddWithValue("@NomePrato", nomePrato);
+
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Extrair todos os campos
+                                string nomePratoResultado = reader["nome"].ToString();
+                                string preco = $"R$ {Convert.ToDecimal(reader["preco"]).ToString("F2")}";
+                                string descricao = reader["descricao"].ToString();
+                                string mediaNota = reader["media_nota"].ToString();
+                                string nomeRestaurante = reader["NomeRestaurante"].ToString();
+
+                                // Carregar imagem
+                                Image foto = null;
+                                if (reader["foto"] != DBNull.Value)
+                                {
+                                    string caminhoFoto = reader["foto"].ToString(); // Obtenha o caminho da imagem
+                                    if (File.Exists(caminhoFoto)) // Verifique se o arquivo existe
+                                    {
+                                        foto = Image.FromFile(caminhoFoto); // Carregue a imagem do arquivo
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Arquivo de imagem não encontrado: " + caminhoFoto);
+                                    }
+
+                                    // Abrir o próximo formulário com os dados
+                                    comentarioComida comUsu = new comentarioComida(
+                           nomePratoResultado,
+                            preco,
+                            descricao,
+                            mediaNota,
+                            nomeRestaurante,
+                            foto,
+                             Convert.ToInt32(reader["id"])
+                        );
+                                    comUsu.Show();
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Prato não encontrado.");
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao buscar dados: {ex.Message}");
+                }
+            }
         }
 
             private void panel2_Paint(object sender, PaintEventArgs e)
