@@ -99,8 +99,11 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 
 ## Estrutura do Código 
  •/src: Contém os arquivos principais do sistema.
+ 
    °/Forms: Telas e formulários do sistema.
+   
    °/Controllers: Controle da lógica de negócio.
+   
    °/Models: Modelos e classes relacionadas ao banco de dados.
 
  •/database: Scripts SQL para criar e popular o banco de dados.
