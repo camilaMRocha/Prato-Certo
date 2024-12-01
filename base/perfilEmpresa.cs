@@ -288,7 +288,7 @@ namespace pratocerto
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -303,7 +303,7 @@ namespace pratocerto
 
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
-          
+
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -313,12 +313,12 @@ namespace pratocerto
 
         private void panel5_Paint_1(object sender, PaintEventArgs e)
         {
-           
+
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
-          
+
         }
 
         private void panel9_Paint(object sender, PaintEventArgs e)
@@ -402,8 +402,8 @@ namespace pratocerto
                 }
             }
         }
-            private void AtualizarFotoUsuario(string caminhoFoto)
-            {
+        private void AtualizarFotoUsuario(string caminhoFoto)
+        {
             using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
             {
                 string query = "UPDATE cliente SET foto = @foto WHERE id = @id";
@@ -688,7 +688,7 @@ namespace pratocerto
                 }
             }
         }
-                
+
         private void button8_Click_1(object sender, EventArgs e)
         {
 
@@ -748,27 +748,34 @@ namespace pratocerto
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Verifica se o clique foi numa linha válida
             if (e.RowIndex >= 0)
             {
+                // Verifica se o clique foi na coluna "Alterar"
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "btnAlterar")
                 {
-                    // Código para abrir o formulário de alteração
+                    // Obtém os dados da linha
                     int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
                     string nomePrato = dataGridView1.Rows[e.RowIndex].Cells["nome"].Value.ToString();
                     string descricaoPrato = dataGridView1.Rows[e.RowIndex].Cells["descricao"].Value.ToString();
                     string precoPrato = dataGridView1.Rows[e.RowIndex].Cells["preco"].Value.ToString();
                     Image fotoPrato = (Image)dataGridView1.Rows[e.RowIndex].Cells["foto"].Value;
 
+                    // Abre o formulário para editar o prato
                     alterarComida formularioAlterar = new alterarComida(idPrato, nomePrato, descricaoPrato, precoPrato, fotoPrato);
                     formularioAlterar.ShowDialog();
                 }
+                // Verifica se o clique foi na coluna "Deletar"
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "btnDeletar")
                 {
+                    // Obtém o ID do prato
                     int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
                     DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir este prato?", "Excluir", MessageBoxButtons.YesNo);
+
+                    // Se o usuário confirmar a exclusão
                     if (resultado == DialogResult.Yes)
                     {
-                        // Deletar o prato do banco de dados
+                        // Chama o método de exclusão
                         DeletarPrato(idPrato);
 
                         // Atualiza o DataGridView
@@ -776,14 +783,13 @@ namespace pratocerto
                     }
                 }
             }
-
-
         }
+
+        // Método para deletar o prato
         private void DeletarPrato(int idPrato)
         {
             try
             {
-                // Conexão com o banco de dados
                 using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
                 {
                     conexao.Open();
