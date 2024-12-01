@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.IO;
 
 
+
 namespace pratocerto
 {
     public partial class adicionarComida : Form
@@ -18,12 +19,30 @@ namespace pratocerto
         public adicionarComida()
         {
             InitializeComponent();
+            CarregarFotoRestaurante();
             MySqlConnection conexao = new MySqlConnection();
             conexao.ConnectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ";
             conexao.Open();
 
             label1.Text = $"{sessaoUsuario.nome}!";
+
         }
+
+        private void CarregarFotoRestaurante()
+        {
+            string fotoRestaurante = sessaoUsuario.foto;
+
+            if (!string.IsNullOrEmpty(fotoRestaurante) && File.Exists(fotoRestaurante))
+            {
+                pictureBox1.Image = Image.FromFile(fotoRestaurante);
+            }
+            else
+            {
+                pictureBox1.Image = null; // ou uma imagem padrão
+            }
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -70,23 +89,19 @@ namespace pratocerto
 
             if (pictureBox3.Image != null)
             {
-                // Crie o diretório onde as imagens serão salvas
-                string diretorioImagens = Path.Combine(Application.StartupPath, "Fotos");
-                if (!Directory.Exists(diretorioImagens))
+                // Diretório para imagens de pratos
+                string diretorioPratos = Path.Combine(Application.StartupPath, "FotosPratos");
+                if (!Directory.Exists(diretorioPratos))
                 {
-                    Directory.CreateDirectory(diretorioImagens);  // Cria o diretório caso não exista
+                    Directory.CreateDirectory(diretorioPratos);
                 }
 
-                // Gerar um nome único para o arquivo (por exemplo, usando GUID)
-                string nomeImagem = Guid.NewGuid().ToString() + ".png";
-                fotoCaminho = Path.Combine(diretorioImagens, nomeImagem);
+                string nomeImagemPrato = Guid.NewGuid().ToString() + ".png";
+                fotoCaminho = Path.Combine(diretorioPratos, nomeImagemPrato);
 
-                // Salvar a imagem no diretório
                 pictureBox3.Image.Save(fotoCaminho, System.Drawing.Imaging.ImageFormat.Png);
-
-                // Salvar o caminho da foto na variável estática para uso em outras páginas
-                sessaoUsuario.foto = fotoCaminho;
             }
+
 
             // Conexão com o banco de dados e inserção
             using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
@@ -143,6 +158,11 @@ namespace pratocerto
             perfilEmpresa perEmp = new perfilEmpresa();
             perEmp.Show();
             this.Close();
+        }
+
+        private void adicionarComida_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

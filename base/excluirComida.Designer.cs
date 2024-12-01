@@ -174,7 +174,6 @@ namespace pratocerto
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::pratocerto.Properties.Resources.dollynho;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(15, 20);
             this.pictureBox3.Name = "pictureBox3";

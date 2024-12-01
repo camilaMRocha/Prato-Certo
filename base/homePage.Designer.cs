@@ -36,9 +36,9 @@ namespace pratocerto
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelRanking = new System.Windows.Forms.FlowLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -114,9 +114,30 @@ namespace pratocerto
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(12, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(898, 797);
+            this.panel2.Size = new System.Drawing.Size(898, 1112);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.flowLayoutPanelRanking);
+            this.panel3.Location = new System.Drawing.Point(34, 687);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(835, 392);
+            this.panel3.TabIndex = 5;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // flowLayoutPanelRanking
+            // 
+            this.flowLayoutPanelRanking.AutoScroll = true;
+            this.flowLayoutPanelRanking.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelRanking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanelRanking.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanelRanking.Name = "flowLayoutPanelRanking";
+            this.flowLayoutPanelRanking.Size = new System.Drawing.Size(835, 392);
+            this.flowLayoutPanelRanking.TabIndex = 0;
+            this.flowLayoutPanelRanking.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelRanking_Paint);
             // 
             // label2
             // 
@@ -130,27 +151,6 @@ namespace pratocerto
             this.label2.Size = new System.Drawing.Size(86, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Bem vindo!";
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.flowLayoutPanelRanking);
-            this.panel3.Location = new System.Drawing.Point(34, 444);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(835, 309);
-            this.panel3.TabIndex = 5;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // flowLayoutPanelRanking
-            // 
-            this.flowLayoutPanelRanking.AutoScroll = true;
-            this.flowLayoutPanelRanking.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanelRanking.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelRanking.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanelRanking.Name = "flowLayoutPanelRanking";
-            this.flowLayoutPanelRanking.Size = new System.Drawing.Size(835, 309);
-            this.flowLayoutPanelRanking.TabIndex = 0;
-            this.flowLayoutPanelRanking.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelRanking_Paint);
             // 
             // homePage
             // 
