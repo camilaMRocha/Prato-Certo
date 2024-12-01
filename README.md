@@ -9,33 +9,83 @@ O **Prato-Certo** é um aplicativo projetado para coletar e analisar avaliaçõe
 
 ## Tabela de Conteúdos
 - [Sobre o Projeto]
-- [Principais Funcionalidades]
+- [Funcionalidades]
+- [Requisitos do Projeto]
+  - Requisitos Funcionais
+  - Requisitos Não Funcionais
+- [Configuração do Ambiente]
+  - Pré-Requisitos
+  - Como Importar o Projeto
+  - Configuração do Banco de Dados
+  - Repositório de Imagens
+- [Como Usar]
+  - Executando o Sistema
+  - Login Inicial e Dados de Teste
+- [Estrutura do Código]
 - [Histórias de Usuário]
-- [Requisitos Funcionais]
-- [Requisitos Não Funcionais]
 - [Desenvolvedores]
+
+
+
 
 ## Sobre o Projeto
 O projeto foi desenvolvido para atender à crescente demanda por feedbacks precisos e relevantes na indústria gastronômica. Com o **Feedback Gastronômico**, restaurantes podem aprimorar seus produtos e serviços com base em dados reais, enquanto clientes obtêm insights confiáveis para escolher os melhores pratos.
 
-## Principais Funcionalidades
+## Funcionalidades
 - **Avaliação de Pratos**: Clientes podem avaliar pratos com notas e comentários.
-- **Análise de Feedbacks**: Relatórios detalhados para os estabelecimentos sobre o desempenho de seus pratos e serviços.
-- **Recomendações para Clientes**: Listagem dos melhores e piores pratos, baseada nas avaliações.
-- **Painel Administrativo para Estabelecimentos**: Gerenciamento de feedbacks, visualização de tendências e acompanhamento do desempenho de itens do cardápio.
-## Requisitos Não-Funcionais
+- **Listagem de Melhores Pratos**: Baseada nas avaliações de outros clientes.
+- **Relatórios para Gerentes**: Visualização detalhada do desempenho dos pratos e serviços.
+- **Perfil de Usuário e Gerente**: Permite alterações e personalizações.
+- **Painel Administrativo para Estabelecimentos**: Gerenciamentode pratos e comentários.
+## Requisitos
+ ## Requisitos Não-Funcionais
 - **Compatibilidade**: Adaptar o design para diferentes tamanhos.
 - **Usabilidade**: Criação de uma interface limpa.
 - **Segurança**: Verificação de campos vazios e formato de e-mail.
 - **Backup**: Backup automático.
 - **Escalabilidade**: Permitir adicionar novas avaliações sem comprometer o desempenho.
 - **Desempenho**: O sistema deve carregar as avaliações rapidamente.
+- **Armazenamento de Imagens**: Uso eficiente do espaço para armazenar e recuperar imagens.
   
-## Requisitos Funcionais
+ ## Requisitos Funcionais
 - **Cadastro**: Formulário para inserir nome, e-mail e senha.
 - **Avaliação**: Avaliação dos pratos do restaurante escolhido.
-- **Pesquisa**: Filtrar os pratos que deseja. Exemplo: com 5 estrelas.
+- **Listagem de Avaliação**: Filtrar os pratos por melhores e piores avaliações.
+- **Detalhes do Prato**: Exibir informações como Ingredientes e média de avaliação.
 
+## Configuração do Ambiente 
+ ## Pré-Requisitos 
+ 
+ **Certifique-se de ter instalado**:
+ - MySQL Server
+ - Visual Studio com suporte ao .NET Framework
+ - MySQL Connector/NET
+
+ ## Como Importar o Projeto
+ 1. Clone o Repositório:
+    git clone                             https://github.com/usuario/Prato-     Certo.git
+ 2. Abra o Projeto no Visual Studio.
+ 3. Certifique-se de que as.             dependências (MySQL Connector e.      Microsoft.Office.Interop.Excel)       estejam configuradas via NuGet.
+
+ ## Configuração Do Banco de Dados
+ 1. Crie o Banco de Dados:
+    **CREATE DATABASE prato_certo**
+ 2. Importe o arquivo                     **prato_certo.sql** localizado.       na pasta /database:
+    Inclui as tabelas: prato,             restaurante,usuario,entre outras.
+ 3. (Opcional) Insira dados de            exemplo usando os scripts na          pasta /database/seeds.
+
+  ## Repositório de Imagens 
+  1. Crie uma pasta no servidor local      para armazenar imagens:
+     C:\PratoCerto\Imagens
+  2. No código, configure o caminho       para essa pasta no acesso às          imagens:
+    string caminhoImage@
+    "C:\PratoCerto\Imagens";
+  3. Certifique-se de que o programa    tenha permissões para                 leitura/escrita nesse diretório.
+
+
+
+
+ 
 ## Histórias de Usuário
 
 1. **Usuário Comum ou Gerente do Restaurante**  
