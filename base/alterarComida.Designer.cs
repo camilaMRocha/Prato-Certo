@@ -176,7 +176,6 @@ namespace pratocerto
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::pratocerto.Properties.Resources.dollynho;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(15, 20);
             this.pictureBox3.Name = "pictureBox3";
@@ -292,7 +291,6 @@ namespace pratocerto
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(16, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 37);

@@ -113,9 +113,7 @@ namespace pratocerto
 
         private void button9_Click(object sender, EventArgs e)
         {
-            alterarComida altComi = new alterarComida();
-            altComi.Show();
-            this.Close();
+
         }
 
         private void button10_Click(object sender, EventArgs e)

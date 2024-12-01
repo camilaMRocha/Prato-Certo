@@ -68,6 +68,8 @@ namespace pratocerto
                                 sessaoUsuario.rua = leitorRestaurante.GetString("rua");
                                 sessaoUsuario.foto = leitorRestaurante.IsDBNull(leitorRestaurante.GetOrdinal("foto")) ? null : leitorRestaurante.GetString("foto");
 
+
+
                                 // Verifica status
                                 if (leitorRestaurante.GetInt32("status") == 0)
                                 {
