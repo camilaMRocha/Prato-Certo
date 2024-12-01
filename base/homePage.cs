@@ -141,7 +141,8 @@ namespace pratocerto
                             descricao,
                             mediaNota,
                             nomeRestaurante,
-                            foto
+                            foto,
+                             Convert.ToInt32(reader["id"])
                         );
                                     comUsu.Show();
                                     this.Close();
