@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27/11/2024 às 20:41
+-- Tempo de geração: 01/12/2024 às 17:11
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,15 +35,6 @@ CREATE TABLE `avaliacao` (
   `nota` int(11) DEFAULT NULL,
   `comentario` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Despejando dados para a tabela `avaliacao`
---
-
-INSERT INTO `avaliacao` (`fk_prato_id`, `fk_cliente_id`, `id`, `data`, `nota`, `comentario`) VALUES
-(1, 1, 1, 1732736013, 4, 'Gostei muito do prato!'),
-(1, 1, 2, 1732736084, 3, 'Bom, mas pode melhorar!'),
-(1, 1, 3, 1732736189, 3, 'Bom, mas pode melhorar!');
 
 --
 -- Acionadores `avaliacao`
@@ -76,7 +67,7 @@ CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nome` varchar(200) DEFAULT NULL,
   `email` varchar(200) DEFAULT NULL,
-  `senha` varchar(20) DEFAULT NULL,
+  `senha` varchar(100) DEFAULT NULL,
   `foto` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -85,7 +76,7 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`, `foto`) VALUES
-(1, 'Cliente Teste', 'cliente@teste.com', 'senha123', 'cliente.jpg');
+(1, 'monica', 'monica@gmail.com', '1234monica', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\83d7d3a1-7ee8-4b79-9c44-f71afce89d30.jpg');
 
 -- --------------------------------------------------------
 
@@ -108,7 +99,17 @@ CREATE TABLE `prato` (
 --
 
 INSERT INTO `prato` (`id`, `media_nota`, `preco`, `descricao`, `foto`, `nome`, `fk_restaurante_id`) VALUES
-(1, 3, 30, 'Prato Teste de Avaliação', 'prato.jpg', 'Prato Teste', 1);
+(1, 5, 36, 'Feijoada tradicional com arroz, farofa e couve', 'feijoada.jpg', 'Feijoada', 2),
+(2, 5, 45, 'Churrasco de picanha com vinagrete e maionese', 'churrasco.jpg', 'Churrasco', 2),
+(3, 5, 30, 'Pizza com molho de tomate, mozzarella, manjericão e azeite', 'pizza_margherita.jpg', 'Pizza Margherita', 1),
+(4, 5, 25, 'Hambúrguer artesanal com queijo cheddar e bacon', 'burguer_artesanal.jpg', 'Burguer Artesanal', 1),
+(5, 5, 50, 'Sushi com variedades de peixe fresco e arroz de sushi', 'sushi_variado.jpg', 'Sushi Variado', 1),
+(6, 5, 2, 'carne bovina, salada, tomate, queijo e bacon', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho', 'hambuerguer', 1),
+(7, 7, 4555, 'ghghfh', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\bc2acabc-8956-4646-9353-5a4a9d50eb6f.png', 'ghbcgh', 1),
+(8, 3, 777, 'ghtfhtyh', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\d890a561-0787-472a-b0b0-aebc7d573c25.png', 'fgfgfg', 1),
+(9, 3, 8, 'baunilha, leite e etc', 'foto.jpg', 'sorvete baunilhaa', 1),
+(10, 4, 150, 'pato assado no forno com tempero', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\Fotos\\1e230e6a-a871-4b2c-b011-26ea577df185.png', 'pato assado', 2),
+(11, 5, 6, 'frango, farinha, óleo e entre outros', 'C:\\Users\\Alima\\Desktop\\Etec\\4°Bimestre\\00trabalho ds\\Prato-Certo\\base\\bin\\Debug\\FotosPratos\\8c29e717-c3c1-440b-aaf8-f04fe4dc36c3.png', 'coxinha', 1);
 
 -- --------------------------------------------------------
 
@@ -132,7 +133,8 @@ CREATE TABLE `restaurante` (
 --
 
 INSERT INTO `restaurante` (`id`, `nome`, `email`, `telefone`, `rua`, `senha`, `foto`, `status`) VALUES
-(1, 'Restaurante Teste', 'teste@restaurante.com', '1234567890', 'Rua Teste', 1234, 'foto.jpg', 'Ativo');
+(1, 'mc downald\'s', 'mc@gmail.com', '1959565654', 'centroo', '123456mc', NULL, '1'),
+(2, 'gogo', 'gogo@gmail.com', '19546565', 'sodjksd', '1234gogo', NULL, '1');
 
 --
 -- Índices para tabelas despejadas
@@ -173,25 +175,25 @@ ALTER TABLE `restaurante`
 -- AUTO_INCREMENT de tabela `avaliacao`
 --
 ALTER TABLE `avaliacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `prato`
 --
 ALTER TABLE `prato`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de tabela `restaurante`
 --
 ALTER TABLE `restaurante`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para tabelas despejadas
@@ -214,3 +216,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

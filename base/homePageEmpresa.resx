@@ -493,4 +493,17 @@
         UAFFFFABRRRQAUUUUAFFFFABRRRQB//Z
 </value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value> Para acessar seu perfil clique no seu nome escrito: "Bem vindo usuário!".
+ Indo para o seu perfil, terá o acesso a suas informações e terá a chance de 
+mudar algo como E-mail, ou até mesmo excluir permanentemente. E sendo
+uma empresa, você pode adicionar seu pratos para terem uma média.</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Não só isso, o restaurante poderá exportar todos os seus pratos para o Excel,
+e assim ter uma visualização melhor das informações dos seus pratos. A empresa
+poderá alterar ou excluir o prato adicionado, e também poderá alterar ou excluir a 
+própria conta. Caso algum dia queira reativar sua conta novamente, basta colocar
+E-mail e senha para funcionar.</value>
+  </data>
 </root>
