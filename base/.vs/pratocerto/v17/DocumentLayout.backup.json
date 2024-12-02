@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:homepageempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -35,7 +35,7 @@
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:comentariocomida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,7 +43,7 @@
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:perfilusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|c:\\users\\rose\\desktop\\etec\\prato-certo\\base\\pesquisa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\pesquisa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0924322B-FB35-49D9-94A1-29E0C007AD1A}|pratocerto.csproj|solutionrelative:pesquisa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -101,8 +101,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilEmpresa.cs [Design]",
               "RelativeToolTip": "perfilEmpresa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:08:56.01Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-27T20:08:56.01Z"
             },
             {
               "$type": "Document",
@@ -113,8 +112,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\comentarioComida.cs [Design]",
               "RelativeToolTip": "comentarioComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:01.287Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-27T20:10:01.287Z"
             },
             {
               "$type": "Document",
@@ -126,8 +124,7 @@
               "RelativeToolTip": "comentarioComida.cs",
               "ViewState": "AgIAADUBAAAAAAAAAAAEwF0BAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T00:59:05.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T00:59:05.812Z"
             },
             {
               "$type": "Document",
@@ -138,8 +135,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\homePage.cs [Design]",
               "RelativeToolTip": "homePage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:35.166Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-27T20:09:35.166Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "RelativeToolTip": "homePage.cs",
               "ViewState": "AgIAAKkAAAAAAAAAAAAlwLsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:36.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T20:09:36.198Z"
             },
             {
               "$type": "Document",
@@ -176,8 +171,7 @@
               "RelativeToolTip": "perfilEmpresa.cs",
               "ViewState": "AgIAAFcBAAAAAAAAAAApwGsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:18.495Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T20:10:18.495Z"
             },
             {
               "$type": "Document",
@@ -189,8 +183,7 @@
               "RelativeToolTip": "alterarComida.cs",
               "ViewState": "AgIAAIwAAAAAAAAAAAAQwLIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T23:26:56.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T23:26:56.332Z"
             },
             {
               "$type": "Document",
@@ -201,8 +194,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\alterarComida.cs [Design]",
               "RelativeToolTip": "alterarComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T23:26:38.592Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-01T23:26:38.592Z"
             },
             {
               "$type": "Document",
@@ -213,8 +205,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\perfilUsuario.cs [Design]",
               "RelativeToolTip": "perfilUsuario.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:43:17.641Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-29T21:43:17.641Z"
             },
             {
               "$type": "Document",
@@ -225,8 +216,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\adicionarComida.cs [Design]",
               "RelativeToolTip": "adicionarComida.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T00:16:23.96Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-02T00:16:23.96Z"
             },
             {
               "$type": "Document",
@@ -237,8 +227,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\pesquisa.cs [Design]",
               "RelativeToolTip": "pesquisa.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T01:24:21.099Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-02T01:24:21.099Z"
             },
             {
               "$type": "Document",
@@ -250,8 +239,7 @@
               "RelativeToolTip": "login.cs",
               "ViewState": "AgIAABwAAAAAAAAAAIA+wBUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:01:31.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T23:01:31.847Z"
             },
             {
               "$type": "Document",
@@ -274,8 +262,7 @@
               "RelativeToolTip": "adicionarComida.cs",
               "ViewState": "AgIAAHwAAAAAAAAAAAAlwIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T00:49:36.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T00:49:36.261Z"
             },
             {
               "$type": "Document",
@@ -287,8 +274,7 @@
               "RelativeToolTip": "perfilUsuario.cs",
               "ViewState": "AgIAADQBAAAAAAAAAAAIwBsBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T21:43:19.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T21:43:19.569Z"
             },
             {
               "$type": "Document",
@@ -299,8 +285,7 @@
               "ToolTip": "C:\\Users\\Rose\\Desktop\\etec\\Prato-Certo\\base\\login.cs [Design]",
               "RelativeToolTip": "login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:10:39.993Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-27T20:10:39.993Z"
             },
             {
               "$type": "Document",
@@ -335,8 +320,7 @@
               "RelativeToolTip": "homePageEmpresa.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAtwCkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:09:27.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T20:09:27.802Z"
             }
           ]
         }
