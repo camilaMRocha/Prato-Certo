@@ -150,7 +150,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 | Nome        | Responsabilidades |
 |-------------|-------------------|
 | **Camila de M. Rocha**      |  histórias de usuário 1 e 3. |
-| **Joyce C. da Silva**       | istórias de usuário 2 e 7. |
+| **Joyce C. da Silva**       | histórias de usuário 2 e 7. |
 | **Ana Laura M. de Almeida**   |  histórias de usuário 4 e 6. |
 | **Guilherme Pereira**   | histórias de usuário 5 e 8. |
 
