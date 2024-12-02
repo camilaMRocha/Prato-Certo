@@ -36,7 +36,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 - **Listagem de Melhores Pratos**: Baseada nas avaliações de outros clientes.
 - **Relatórios para Gerentes**: Visualização detalhada do desempenho dos pratos e serviços.
 - **Perfil de Usuário e Gerente**: Permite alterações e personalizações.
-- **Painel Administrativo para Estabelecimentos**: Gerenciamentode pratos e comentários.
+- **Painel Administrativo para Estabelecimentos**: Gerenciamento dos pratos e comentários.
 ## Requisitos
  ## Requisitos Não-Funcionais
 - **Compatibilidade**: Adaptar o design para diferentes tamanhos.
