@@ -115,7 +115,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 ## Histórias de Usuário
 
 1. **Usuário Comum**  
-   *Como usuário, quero saber quais melhores pratos do programa.*  
+   *Como usuário, quero saber quais melhores pratos do programa, para tomar uma decisão rápida.*  
 
    
 2. **Usuário Comum**  
@@ -123,10 +123,10 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
    
    
 3. **Gerente do Restaurante**  
-   *Como restaurante quero ver quais pratos eu tenho.*  
+   *Como restaurante quero ver quais pratos eu tenho, para ter uma noção de como está indo os meus pratos.*  
    
 4. **Usuário Comum e Gerente do Restaurante**  
-   *Como usuário, quero alterar meu perfil; Como gerente quero alterar meu perfil.*  
+   *Como usuário e gerente, quero alterar meu perfil, para atualizar minhas informações*  
     
 
 5. **Usuário Comum**  
@@ -138,7 +138,7 @@ O projeto foi desenvolvido para atender à crescente demanda por feedbacks preci
 
 
 7. **Usuário Comum**  
-   *Como usuário, quero compartilhar minha avaliação nas redes sociais para que meus amigos também possam saber sobre minha experiência com o prato.*  
+   *Como usuário, quero compartilhar minha avaliação nas redes sociais, para que meus amigos também possam saber sobre minha experiência com o prato.*  
     
 
 8. **Gerente do Restaurante**  
