@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
 
 namespace pratocerto
 {
@@ -30,7 +31,8 @@ namespace pratocerto
             conexao.ConnectionString = "SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ";
             conexao.Open();
 
-            label1.Text = $"{sessaoUsuario.nome}!";
+            label1.Text = $"{sessaoUsuario.nome}";
+            label2.Text = $"{sessaoUsuario.nome}";
             label7.Text = nomePrato;
             label3.Text = preco;
             label4.Text = descricao;
@@ -301,6 +303,39 @@ namespace pratocerto
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void panel8_Paint_1(object sender, PaintEventArgs e)
+        {
+            this.panel8.BackColor = Color.FromArgb(178, 48, 67);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comentarioComida_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(sessaoUsuario.foto) && File.Exists(sessaoUsuario.foto))
+            {
+                // Se a foto existe, carregar na PictureBox
+                pictureBox1.Image = Image.FromFile(sessaoUsuario.foto);
+                pictureBox1.BorderStyle = BorderStyle.None;  // Remover borda
+            }
+            else
+            {
+                // Caso contrário, deixar a PictureBox vazia e adicionar uma borda
+                pictureBox1.Image = null;  // A PictureBox ficará sem imagem
+                pictureBox1.BorderStyle = BorderStyle.Fixed3D;  // Adiciona uma borda
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            homePage home = new homePage();
+            home.Show();
+            this.Close();
         }
     }
 }

@@ -15,66 +15,29 @@ namespace pratocerto
     public partial class alterarComida : Form
     {
         private int idPrato;
-        private string nome;
-        private string descricao;
-        private string preco;
-        private Image foto;
-        public alterarComida(int id, string nomePrato, string descricaoPrato, string precoPrato, Image fotoPrato)
+        private string nomePrato;
+        private string descricaoPrato;
+        private string precoPrato;
+        public alterarComida(int idPrato, string nomePrato, string descricaoPrato, string precoPrato)
         {
             InitializeComponent();
-            this.idPrato = id;
-            this.nome = nomePrato;
-            this.descricao = descricaoPrato;
-            this.preco = precoPrato;
-            this.foto = fotoPrato;
+            this.idPrato = idPrato;
+            this.nomePrato = nomePrato;
+            this.descricaoPrato = descricaoPrato;
+            this.precoPrato = precoPrato;
 
-            // Preenche os controles com os dados recebidos
-            textBox2.Text = nomePrato;
-            textBox3.Text = descricaoPrato;
-            textBox4.Text = precoPrato;
-            pictureBox3.Image = fotoPrato;
+            // Preencher os campos com as informações corretas do prato
+            textBox2.Text = nomePrato;       // Preencher com o nome do prato
+            textBox3.Text = descricaoPrato;  // Preencher com a descrição do prato
+            textBox4.Text = precoPrato;      // Preencher com o preço do prato
         }
 
+
+
         // Método assíncrono renomeado
-        private async Task AtualizarPratoAsyncComImagem(int idPrato, string nome, string descricao, string preco, Image foto)
+        private async Task AtualizarPratoAsyncComImagem()
         {
-            try
-            {
-                using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
-                {
-                    await conexao.OpenAsync();
-
-                    string query = "UPDATE prato SET nome = @nome, descricao = @descricao, preco = @preco, foto = @foto WHERE id = @idPrato";
-
-                    using (MySqlCommand comando = new MySqlCommand(query, conexao))
-                    {
-                        comando.Parameters.AddWithValue("@nome", nome);
-                        comando.Parameters.AddWithValue("@descricao", descricao);
-                        comando.Parameters.AddWithValue("@preco", preco);
-
-                        if (foto != null)
-                        {
-                            using (MemoryStream ms = new MemoryStream())
-                            {
-                                foto.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                comando.Parameters.AddWithValue("@foto", ms.ToArray());
-                            }
-                        }
-                        else
-                        {
-                            comando.Parameters.AddWithValue("@foto", DBNull.Value);
-                        }
-
-                        comando.Parameters.AddWithValue("@idPrato", idPrato);
-
-                        await comando.ExecuteNonQueryAsync();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao atualizar prato: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
 
@@ -101,7 +64,7 @@ namespace pratocerto
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            perfilUsuario perUsu = new perfilUsuario();
+            perfilEmpresa perUsu = new perfilEmpresa();
             perUsu.Show();
             this.Close();
         }
@@ -118,6 +81,7 @@ namespace pratocerto
             string nomeAtualizado = textBox2.Text;
             string descricaoAtualizada = textBox3.Text;
             string precoAtualizado = textBox4.Text;
+
             Image fotoAtualizada = pictureBox3.Image;
 
             // Validação básica para garantir que os campos não estão vazios
@@ -127,58 +91,42 @@ namespace pratocerto
                 return;
             }
 
-            // Chama o método assíncrono renomeado
-            await AtualizarPratoAsyncComImagem(idPrato, nomeAtualizado, descricaoAtualizada, precoAtualizado, fotoAtualizada);
-
-            MessageBox.Show("Prato atualizado com sucesso!");
-
-            // Redireciona para a página inicial
-            homePage home = new homePage();
-            home.Show();
-
-            // Fecha o formulário de alteração
-            this.Close();
-        }
-
-        private async Task AtualizarPratoAsync(int idPrato, string nome, string descricao, string preco, Image foto)
-        {
             try
             {
+                // Atualiza as informações do prato no banco de dados
                 using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
                 {
-                    await conexao.OpenAsync();
+                    string query = "UPDATE prato SET nome = @nome, descricao = @descricao, preco = @preco WHERE id = @idPrato";
 
-                    string query = "UPDATE prato SET nome = @nome, descricao = @descricao, preco = @preco, foto = @foto WHERE id = @idPrato";
+                    MySqlCommand comando = new MySqlCommand(query, conexao);
+                    comando.Parameters.AddWithValue("@nome", nomeAtualizado);
+                    comando.Parameters.AddWithValue("@descricao", descricaoAtualizada);
+                    comando.Parameters.AddWithValue("@preco", precoAtualizado);
+                    comando.Parameters.AddWithValue("@idPrato", idPrato); // Usando o ID do prato selecionado
 
-                    using (MySqlCommand comando = new MySqlCommand(query, conexao))
+                    conexao.Open();
+                    int rowsAffected = comando.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
                     {
-                        comando.Parameters.AddWithValue("@nome", nome);
-                        comando.Parameters.AddWithValue("@descricao", descricao);
-                        comando.Parameters.AddWithValue("@preco", preco);
-
-                        if (foto != null)
-                        {
-                            using (MemoryStream ms = new MemoryStream())
-                            {
-                                foto.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                comando.Parameters.AddWithValue("@foto", ms.ToArray());
-                            }
-                        }
-                        else
-                        {
-                            comando.Parameters.AddWithValue("@foto", DBNull.Value);
-                        }
-
-                        comando.Parameters.AddWithValue("@idPrato", idPrato);
-
-                        await comando.ExecuteNonQueryAsync();
+                        MessageBox.Show("Prato atualizado com sucesso!");
+                        this.Close(); // Fecha o formulário após a atualização
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao atualizar o prato.");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao atualizar prato: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro: {ex.Message}");
             }
+        }
+
+        private async Task AtualizarPratoAsync()
+        {
+            
         }
     
           

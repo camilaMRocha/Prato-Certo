@@ -18,7 +18,6 @@ namespace pratocerto
         public perfilEmpresa()
         {
             InitializeComponent();
-            CarregarPratos();
             MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ");
             conexao.Open();
 
@@ -49,17 +48,12 @@ namespace pratocerto
                         dataGridView1.Columns.Clear();
 
                         // Adiciona colunas de dados
-                        dataGridView1.Columns.Add("id", "ID");
-                        dataGridView1.Columns.Add("media_nota", "Média Nota");
-                        dataGridView1.Columns.Add("preco", "Preço");
-                        dataGridView1.Columns.Add("nome", "Nome");
+                        dataGridView1.Columns.Add("prato_id", "ID");
+                        dataGridView1.Columns.Add("prato_nome", "Nome");
                         dataGridView1.Columns.Add("descricao", "Descrição");
+                        dataGridView1.Columns.Add("preco", "Preço");
+                        dataGridView1.Columns.Add("media_nota", "Média Nota");
 
-                        // Adiciona a coluna de imagem
-                        DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-                        imageColumn.HeaderText = "Foto";
-                        imageColumn.Name = "foto";
-                        dataGridView1.Columns.Add(imageColumn);
 
                         // Adiciona a coluna de Botões "Alterar" e "Deletar"
                         DataGridViewButtonColumn btnAlterar = new DataGridViewButtonColumn();
@@ -79,22 +73,14 @@ namespace pratocerto
                         // Preenchendo o DataGridView com os dados
                         while (resultado.Read())
                         {
-                            Image imagemPrato = null;
-
-                            // Verifica e carrega a imagem, se existir
-                            if (!string.IsNullOrEmpty(resultado["foto"].ToString()) && File.Exists(resultado["foto"].ToString()))
-                            {
-                                imagemPrato = Image.FromFile(resultado["foto"].ToString());
-                            }
 
                             // Adiciona as informações ao DataGridView
                             dataGridView1.Rows.Add(
                                 resultado["id"].ToString(),
-                                resultado["media_nota"].ToString(),
-                                resultado["preco"].ToString(),
                                 resultado["nome"].ToString(),
                                 resultado["descricao"].ToString(),
-                                imagemPrato
+                                resultado["preco"].ToString(),
+                                resultado["media_nota"].ToString()
                             );
                         }
 
@@ -118,62 +104,7 @@ namespace pratocerto
 
         private void CarregarPratos()
         {
-            MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ; ");
-            conexao.Open();
-
-            // Limpa as colunas anteriores
-            dataGridView1.Columns.Clear();
-
-            // Configura as colunas novamente
-            dataGridView1.Columns.Add("id", "ID");
-            dataGridView1.Columns.Add("media_nota", "Média Nota");
-            dataGridView1.Columns.Add("preco", "Preço");
-            dataGridView1.Columns.Add("nome", "Nome");
-            dataGridView1.Columns.Add("descricao", "Descrição");
-
-            // Adiciona a coluna de imagem
-            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
-            imageColumn.HeaderText = "Foto";
-            imageColumn.Name = "foto";
-            dataGridView1.Columns.Add(imageColumn);
-
-            try
-            {
-                string query = "SELECT * FROM prato WHERE fk_restaurante_id = @restauranteId";
-                using (MySqlCommand consulta = new MySqlCommand(query, conexao))
-                {
-                    consulta.Parameters.AddWithValue("@restauranteId", sessaoUsuario.id);
-
-                    using (MySqlDataReader resultado = consulta.ExecuteReader())
-                    {
-                        while (resultado.Read())
-                        {
-                            Image imagemPrato = null;
-                            if (!string.IsNullOrEmpty(resultado["foto"].ToString()) && File.Exists(resultado["foto"].ToString()))
-                            {
-                                imagemPrato = Image.FromFile(resultado["foto"].ToString());
-                            }
-
-                            dataGridView1.Rows.Add(
-                                resultado["id"].ToString(),
-                                resultado["media_nota"].ToString(),
-                                resultado["preco"].ToString(),
-                                resultado["nome"].ToString(),
-                                resultado["descricao"].ToString(),
-                                imagemPrato
-                            );
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao carregar pratos: {ex.Message}");
-            }
-            finally
-            {
-                conexao.Close();
-            }
+            
         }
 
         private void perfilEmpresa_Load(object sender, EventArgs e)
@@ -662,19 +593,20 @@ namespace pratocerto
                 // Identifica se o clique foi na coluna "Alterar"
                 if (dataGridView1.Columns[e.ColumnIndex].Name == "btnAlterar")
                 {
-                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
-                    string nomePrato = dataGridView1.Rows[e.RowIndex].Cells["nome"].Value.ToString();
+                    // Obtenha o ID do prato usando o alias correto
+                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["prato_id"].Value);
+                    string nomePrato = dataGridView1.Rows[e.RowIndex].Cells["prato_nome"].Value.ToString();
                     string descricaoPrato = dataGridView1.Rows[e.RowIndex].Cells["descricao"].Value.ToString();
                     string precoPrato = dataGridView1.Rows[e.RowIndex].Cells["preco"].Value.ToString();
-                    Image fotoPrato = (Image)dataGridView1.Rows[e.RowIndex].Cells["foto"].Value;
 
-                    alterarComida formularioAlterar = new alterarComida(idPrato, nomePrato, descricaoPrato, precoPrato, fotoPrato);
+                    // Agora, você pode passar esses dados para o formulário de alteração
+                    alterarComida formularioAlterar = new alterarComida(idPrato, nomePrato, descricaoPrato, precoPrato);
                     formularioAlterar.ShowDialog();
                 }
                 // Identifica se o clique foi na coluna "Deletar"
                 else if (dataGridView1.Columns[e.ColumnIndex].Name == "btnDeletar")
                 {
-                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
+                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["prato_id"].Value);
                     DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir este prato?", "Excluir", MessageBoxButtons.YesNo);
 
                     if (resultado == DialogResult.Yes)
@@ -748,41 +680,8 @@ namespace pratocerto
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica se o clique foi numa linha válida
-            if (e.RowIndex >= 0)
-            {
-                // Verifica se o clique foi na coluna "Alterar"
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "btnAlterar")
-                {
-                    // Obtém os dados da linha
-                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
-                    string nomePrato = dataGridView1.Rows[e.RowIndex].Cells["nome"].Value.ToString();
-                    string descricaoPrato = dataGridView1.Rows[e.RowIndex].Cells["descricao"].Value.ToString();
-                    string precoPrato = dataGridView1.Rows[e.RowIndex].Cells["preco"].Value.ToString();
-                    Image fotoPrato = (Image)dataGridView1.Rows[e.RowIndex].Cells["foto"].Value;
-
-                    // Abre o formulário para editar o prato
-                    alterarComida formularioAlterar = new alterarComida(idPrato, nomePrato, descricaoPrato, precoPrato, fotoPrato);
-                    formularioAlterar.ShowDialog();
-                }
-                // Verifica se o clique foi na coluna "Deletar"
-                else if (dataGridView1.Columns[e.ColumnIndex].Name == "btnDeletar")
-                {
-                    // Obtém o ID do prato
-                    int idPrato = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["id"].Value);
-                    DialogResult resultado = MessageBox.Show("Tem certeza que deseja excluir este prato?", "Excluir", MessageBoxButtons.YesNo);
-
-                    // Se o usuário confirmar a exclusão
-                    if (resultado == DialogResult.Yes)
-                    {
-                        // Chama o método de exclusão
-                        DeletarPrato(idPrato);
-
-                        // Atualiza o DataGridView
-                        CarregarPratos();
-                    }
-                }
-            }
+            
+            
         }
 
         // Método para deletar o prato
@@ -820,5 +719,11 @@ namespace pratocerto
             }
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            perfilEmpresa perEmp = new perfilEmpresa();
+            perEmp.Show();
+        }
     }
 }
