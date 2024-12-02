@@ -493,4 +493,16 @@
         UAFFFFABRRRQAUUUUAFFFFABRRRQB//Z
 </value>
   </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value> Caso queira algo específico como um hamburguer, coloque o nome
+da comida na barra de pesquisa e será direcionado para o prato. 
+Indo até lá, você pode ver o nome da comida, preço, descrição, foto e o nome do
+restaurante que publicou o prato. Mais abaixo dessas informações fica os comentários,
+assim tendo uma visão melhor do que as pessoas estão achando desse prato.</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value> Para acessar seu perfil clique no seu nome escrito: "Bem vindo usuário!".
+ Indo para o seu perfil, terá o acesso a suas informações e terá a chance de 
+mudar algo como E-mail, ou até mesmo excluir permanentemente.</value>
+  </data>
 </root>

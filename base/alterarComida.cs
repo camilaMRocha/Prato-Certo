@@ -21,6 +21,8 @@ namespace pratocerto
         public alterarComida(int idPrato, string nomePrato, string descricaoPrato, string precoPrato)
         {
             InitializeComponent();
+            label1.Text = $"{sessaoUsuario.nome}";
+
             this.idPrato = idPrato;
             this.nomePrato = nomePrato;
             this.descricaoPrato = descricaoPrato;
@@ -128,8 +130,98 @@ namespace pratocerto
         {
             
         }
-    
-          
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.jfif;";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string novoCaminhoFoto = openFileDialog.FileName;
+
+                    // Copiar a imagem para a pasta local do aplicativo
+                    string diretorioFotos = Path.Combine(Application.StartupPath, "Fotos");
+                    if (!Directory.Exists(diretorioFotos))
+                    {
+                        Directory.CreateDirectory(diretorioFotos);
+                    }
+
+                    // Gerar um novo nome para a imagem
+                    string nomeArquivo = Guid.NewGuid().ToString() + Path.GetExtension(novoCaminhoFoto);
+                    string caminhoDestino = Path.Combine(diretorioFotos, nomeArquivo);
+
+                    File.Copy(novoCaminhoFoto, caminhoDestino, true);
+
+                    // Atualizar a PictureBox com a nova imagem
+                    pictureBox1.Image = Image.FromFile(caminhoDestino);
+                    pictureBox3.Image = Image.FromFile(caminhoDestino);
+
+                    // Atualizar a foto na sessão
+                    sessaoUsuario.foto = caminhoDestino;
+
+                    // Atualizar o banco de dados
+                    AtualizarFotoUsuario(caminhoDestino);
+                }
+            }
+        }
+
+        private void AtualizarFotoUsuario(string caminhoFoto)
+        {
+            using (MySqlConnection conexao = new MySqlConnection("SERVER=localhost;DATABASE=prato_certo;UID=root;PASSWORD= ;"))
+            {
+                string query = "UPDATE prato SET foto = @foto WHERE id = @id";
+
+                MySqlCommand comando = new MySqlCommand(query, conexao);
+                comando.Parameters.AddWithValue("@foto", caminhoFoto); // Salvar caminho completo ou relativo
+                comando.Parameters.AddWithValue("@id", sessaoUsuario.id);
+
+                try
+                {
+                    conexao.Open();
+                    int rowsAffected = comando.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Foto alterada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao atualizar foto no banco de dados.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao atualizar a foto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void alterarComida_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(sessaoUsuario.foto) && File.Exists(sessaoUsuario.foto))
+            {
+                // Se a foto existe, carregar na PictureBox
+                pictureBox1.Image = Image.FromFile(sessaoUsuario.foto);
+                pictureBox1.BorderStyle = BorderStyle.None;  // Remover borda
+
+                pictureBox3.Image = Image.FromFile(sessaoUsuario.foto);
+                pictureBox3.BorderStyle = BorderStyle.None;
+            }
+            else
+            {
+                // Caso contrário, deixar a PictureBox vazia e adicionar uma borda
+                pictureBox1.Image = null;  // A PictureBox ficará sem imagem
+                pictureBox1.BorderStyle = BorderStyle.Fixed3D;  // Adiciona uma borda
+
+                pictureBox3.Image = null;
+                pictureBox3.BorderStyle = BorderStyle.Fixed3D;
+            }
+        }
     }
 }

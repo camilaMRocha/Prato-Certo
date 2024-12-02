@@ -337,5 +337,17 @@ namespace pratocerto
             home.Show();
             this.Close();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            perfilUsuario perUsu = new perfilUsuario();
+            perUsu.Show();
+            this.Close();
+        }
     }
 }
